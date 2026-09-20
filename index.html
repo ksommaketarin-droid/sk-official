@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SK Official</title>
+
+  <title>SK Official | Fashion • Story • Lifestyle</title>
+
+  <meta name="description" content="SK Official — Fashion, Story & Lifestyle. เรื่องราวของผู้หญิงคนหนึ่งที่เริ่มต้นชีวิตบทใหม่ในอินเดีย">
 
   <style>
     * {
@@ -12,135 +15,253 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background: #fff;
       color: #222;
-      line-height: 1.6;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
     }
 
     header {
       background: #111;
-      color: white;
-      padding: 25px 20px;
+      color: #fff;
       text-align: center;
+      padding: 45px 20px;
     }
 
     header h1 {
-      font-size: 32px;
-      letter-spacing: 3px;
+      font-size: 38px;
+      letter-spacing: 5px;
     }
 
     header p {
-      margin-top: 8px;
-      color: #ddd;
+      margin-top: 10px;
+      color: #ccc;
+      font-size: 15px;
     }
 
     nav {
-      background: white;
-      border-bottom: 1px solid #ddd;
-      padding: 14px 8px;
-      text-align: center;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #eee;
+      padding: 15px 10px;
+      text-align: center;
     }
 
     nav a {
-      color: #222;
+      display: inline-block;
       text-decoration: none;
-      margin: 0 8px;
+      margin: 5px 10px;
       font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .hero {
-      padding: 80px 20px;
+      padding: 100px 20px;
       text-align: center;
       background: #f5f5f5;
     }
 
-    .hero h2 {
-      font-size: 40px;
+    .hero small {
+      display: block;
       margin-bottom: 15px;
+      letter-spacing: 3px;
+      color: #777;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
     }
 
     .hero p {
       max-width: 650px;
       margin: auto;
       color: #555;
+      font-size: 17px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 25px;
-      padding: 13px 28px;
+      margin-top: 30px;
+      padding: 14px 30px;
       background: #111;
-      color: white;
+      color: #fff;
       text-decoration: none;
       border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      opacity: 0.8;
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
+      padding: 80px 20px;
     }
 
     section h2 {
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 30px;
+      font-size: 32px;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .section-intro {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      text-align: center;
+      color: #666;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
     }
 
     .card {
-      border: 1px solid #ddd;
-      padding: 25px;
-      border-radius: 10px;
-      background: white;
+      border: 1px solid #e5e5e5;
+      padding: 30px 22px;
+      border-radius: 12px;
+      background: #fff;
       text-align: center;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     }
 
     .card h3 {
       margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    .card a {
+      text-decoration: none;
     }
 
     .story {
+      max-width: none;
       background: #fafafa;
+    }
+
+    .story-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .story-main {
+      max-width: 750px;
+      margin: 0 auto 45px;
       text-align: center;
     }
 
-    .story p {
-      max-width: 700px;
-      margin: 0 auto 20px;
+    .story-main p {
       color: #555;
+      font-size: 17px;
+      margin-bottom: 15px;
     }
 
     .episode {
       text-align: left;
-      margin-top: 20px;
     }
 
-    .episode h3 {
+    .episode .card {
+      text-align: left;
+    }
+
+    .episode-number {
+      font-size: 13px;
+      color: #888;
+      letter-spacing: 2px;
       margin-bottom: 8px;
+    }
+
+    .shop-card {
+      position: relative;
+    }
+
+    .shop-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 4px 10px;
+      background: #111;
+      color: #fff;
+      border-radius: 20px;
+      font-size: 11px;
+    }
+
+    .contact-box {
+      max-width: 650px;
+      margin: auto;
+      text-align: center;
+      padding: 35px 20px;
+      border: 1px solid #eee;
+      border-radius: 12px;
     }
 
     footer {
       background: #111;
-      color: white;
+      color: #fff;
       text-align: center;
-      padding: 30px 20px;
-      margin-top: 30px;
+      padding: 40px 20px;
+    }
+
+    footer h3 {
+      letter-spacing: 3px;
+      margin-bottom: 10px;
     }
 
     footer p {
-      color: #ccc;
-      font-size: 14px;
+      color: #bbb;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 30px;
+      }
+
+      .hero {
+        padding: 75px 20px;
+      }
+
+      .hero h2 {
+        font-size: 36px;
+      }
+
+      section {
+        padding: 60px 18px;
+      }
+
+      nav a {
+        margin: 4px 6px;
+        font-size: 13px;
+      }
     }
   </style>
 </head>
@@ -149,114 +270,191 @@
 
   <header>
     <h1>SK OFFICIAL</h1>
-    <p>Fashion • Story • Lifestyle</p>
+    <p>FASHION • STORY • LIFESTYLE</p>
   </header>
 
   <nav>
     <a href="#home">หน้าแรก</a>
-    <a href="#shop">สินค้า</a>
+    <a href="#shop">SHOP</a>
     <a href="#story">MY STORY</a>
-    <a href="#services">บริการ</a>
-    <a href="#contact">ติดต่อ</a>
+    <a href="#services">SERVICES</a>
+    <a href="#contact">CONTACT</a>
   </nav>
 
   <div class="hero" id="home">
+    <small>WELCOME TO</small>
+
     <h2>SK Official</h2>
 
     <p>
       พื้นที่สำหรับแฟชั่น เรื่องราว และการเริ่มต้นชีวิตบทใหม่
+      จากผู้หญิงคนหนึ่งที่เลือกสร้างชีวิตของตัวเองขึ้นมาอีกครั้ง
     </p>
 
-    <a class="button" href="#story">อ่านเรื่องราว</a>
+    <a class="button" href="#story">
+      อ่าน MY STORY
+    </a>
   </div>
 
   <section id="shop">
+
     <h2>SHOP</h2>
+
+    <p class="section-intro">
+      พบกับสินค้าและสไตล์ที่เราคัดสรร
+      พร้อมการเดินทางของ SK Official ที่กำลังเริ่มต้น
+    </p>
 
     <div class="cards">
 
-      <div class="card">
+      <div class="card shop-card">
+        <span class="shop-label">FASHION</span>
+
         <h3>Fashion</h3>
+
         <p>
-          สินค้าแฟชั่นและสไตล์ที่คัดสรรมาให้คุณ
+          สินค้าแฟชั่นและสไตล์ที่คัดสรรมา
+          เพื่อสร้างความมั่นใจในแบบของคุณ
         </p>
+
+        <a class="button" href="#">
+          ดูสินค้า
+        </a>
       </div>
 
-      <div class="card">
+      <div class="card shop-card">
+        <span class="shop-label">NEW</span>
+
         <h3>New Collection</h3>
+
         <p>
-          ติดตามสินค้าและคอลเลกชันใหม่จาก SK Official
+          ติดตามสินค้าและคอลเลกชันใหม่
+          จาก SK Official
         </p>
+
+        <a class="button" href="#">
+          Coming Soon
+        </a>
       </div>
 
-      <div class="card">
+      <div class="card shop-card">
+        <span class="shop-label">SOON</span>
+
         <h3>Coming Soon</h3>
+
         <p>
-          สินค้าใหม่กำลังจะเปิดตัว
+          โปรเจกต์และสินค้าใหม่
+          กำลังจะเปิดตัว
         </p>
       </div>
 
     </div>
+
   </section>
 
   <section class="story" id="story">
 
-    <h2>MY STORY</h2>
+    <div class="story-content">
 
-    <p>
-      เรื่องราวของผู้หญิงคนหนึ่งที่ออกเดินทางจากชีวิตเดิม
-      ไปยังประเทศที่ไม่เคยคิดว่าจะได้ใช้ชีวิตอยู่
-      พบกับความรัก ความหวัง ความเจ็บปวด
-      และเรียนรู้ที่จะกลับมายืนด้วยตัวเองอีกครั้ง
-    </p>
+      <h2>MY STORY</h2>
 
-    <div class="cards episode">
+      <div class="story-main">
 
-      <div class="card">
-        <h3><a href="ep01.html">EP.01 — จุดเริ่มต้น</a></h3>
         <p>
-          ก่อนการเดินทาง ชีวิตเดิม และเหตุผลที่ทำให้ต้องเริ่มต้นใหม่
+          เรื่องราวของผู้หญิงคนหนึ่ง
+          ที่ออกเดินทางจากชีวิตเดิม
+          ไปยังประเทศที่ไม่เคยคิดว่าจะได้ใช้ชีวิตอยู่
         </p>
+
+        <p>
+          พบกับความรัก ความหวัง ความเจ็บปวด
+          การสูญเสียความมั่นใจ
+          และการเรียนรู้ที่จะกลับมายืนด้วยตัวเองอีกครั้ง
+        </p>
+
+        <p>
+          นี่ไม่ใช่เพียงเรื่องราวของความรัก
+          แต่คือเรื่องราวของการเริ่มต้นชีวิตใหม่
+        </p>
+
       </div>
 
-      <div class="card">
-        <h3><a href="ep02.html">EP.02 — India</a></h3>
-        <p>
-          ประเทศที่ไม่เคยคิดว่าจะได้มาอยู่
-          ภาษา อาหาร วัฒนธรรม และการปรับตัว
-        </p>
-      </div>
+      <div class="cards episode">
 
-      <div class="card">
-        <h3><a href="ep03.html">EP.03 — The Person I Met</a></h3>
-        <p>
-          การพบใครบางคนที่เข้ามาเปลี่ยนชีวิต
-          และทำให้เริ่มเชื่อเรื่องอนาคตอีกครั้ง
-        </p>
-      </div>
+        <div class="card">
+          <div class="episode-number">EPISODE 01</div>
 
-      <div class="card">
-        <h3><a href="ep04.html">EP.04 — Love & Trust</a></h3>
-        <p>
-          เมื่อความรักต้องเผชิญกับความระแวง
-          ความไม่เข้าใจ และความจริงของชีวิตคู่
-        </p>
-      </div>
+          <h3>
+            <a href="ep01.html">จุดเริ่มต้น</a>
+          </h3>
 
-      <div class="card">
-        <h3>EP.05 — Waiting</h3>
-        <p>
-          ช่วงเวลาที่ต้องรอ ต้องคิด
-          และต้องถามตัวเองว่าชีวิตของเราต้องการอะไร
-        </p>
-      </div>
+          <p>
+            ก่อนการเดินทาง
+            ชีวิตเดิม และเหตุผลที่ทำให้ต้องเริ่มต้นใหม่
+          </p>
+        </div>
 
-      <div class="card">
-        <h3>EP.06 — Standing on My Own</h3>
-        <p>
-          วันที่เริ่มกลับมายืนด้วยตัวเอง
-          ทำงาน เรียนรู้ และสร้างอนาคตของตัวเอง
-        </p>
+        <div class="card">
+          <div class="episode-number">EPISODE 02</div>
+
+          <h3>
+            <a href="ep02.html">India</a>
+          </h3>
+
+          <p>
+            ประเทศที่ไม่เคยคิดว่าจะได้มาอยู่
+            ภาษา อาหาร วัฒนธรรม และการปรับตัว
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="episode-number">EPISODE 03</div>
+
+          <h3>
+            <a href="ep03.html">The Person I Met</a>
+          </h3>
+
+          <p>
+            การพบใครบางคนที่เข้ามาเปลี่ยนชีวิต
+            และทำให้เริ่มเชื่อเรื่องอนาคตอีกครั้ง
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="episode-number">EPISODE 04</div>
+
+          <h3>
+            <a href="ep04.html">Love & Trust</a>
+          </h3>
+
+          <p>
+            เมื่อความรักต้องเผชิญกับความระแวง
+            ความไม่เข้าใจ และความจริงของชีวิตคู่
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="episode-number">EPISODE 05</div>
+
+          <h3>Waiting</h3>
+
+          <p>
+            ช่วงเวลาที่ต้องรอ ต้องคิด
+            และต้องถามตัวเองว่าชีวิตของเราต้องการอะไร
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="episode-number">EPISODE 06</div>
+
+          <h3>Standing on My Own</h3>
+
+          <p>
+            วันที่เริ่มกลับมายืนด้วยตัวเอง
+            ทำงาน เรียนรู้ และสร้างอนาคตของตัวเอง
+          </p>
+        </div>
+
       </div>
 
     </div>
@@ -266,6 +464,10 @@
   <section id="services">
 
     <h2>SERVICES</h2>
+
+    <p class="section-intro">
+      สิ่งที่ SK Official กำลังสร้างและพัฒนาขึ้น
+    </p>
 
     <div class="cards">
 
@@ -281,7 +483,10 @@
 
       <div class="card">
         <h3>Personal Story</h3>
-        <p>เรื่องราวจากประสบการณ์จริง</p>
+        <p>
+          เรื่องราวจากประสบการณ์จริง
+          และการเริ่มต้นชีวิตใหม่
+        </p>
       </div>
 
     </div>
@@ -292,19 +497,30 @@
 
     <h2>CONTACT</h2>
 
-    <div style="text-align:center;">
+    <div class="contact-box">
+
       <p>
-        ติดตาม SK Official และติดต่อเราได้ที่นี่
+        ติดตาม SK Official
+        และติดต่อเราได้ที่นี่
       </p>
+
+      <a class="button" href="#">
+        ติดต่อ SK Official
+      </a>
+
     </div>
 
   </section>
 
   <footer>
-    <p>
-      © 2026 SK Official. All rights reserved.
-    </p>
+
+    <h3>SK OFFICIAL</h3>
+
+    <p>Fashion • Story • Lifestyle</p>
+
+    <p>© 2026 SK Official. All rights reserved.</p>
+
   </footer>
 
 </body>
-</html>
+  </html>

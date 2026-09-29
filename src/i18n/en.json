@@ -1,0 +1,226 @@
+{
+  "tagline": "Fashion · Story · Lifestyle",
+  "house": "From the House of Ketty",
+  "langName": {
+    "en": "English",
+    "th": "Thai",
+    "hi": "Hindi"
+  },
+  "nav": {
+    "home": "Home",
+    "shop": "Store",
+    "story": "Our story",
+    "contact": "Contact",
+    "skip": "Skip to main content",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "main": "Main",
+    "language": "Language",
+    "bag": "Bag",
+    "bagCount": "Bag, {n} items"
+  },
+  "home": {
+    "title": "SK Official · Fashion, story and lifestyle",
+    "description": "SK Official, from the House of Ketty: eyewear, watches, clothing, footwear and accessories, with ordering on WhatsApp and payment by UPI or cash.",
+    "heroTitle": "Style for a new chapter",
+    "heroLead": "A space for fashion, stories and a new chapter in life, created by a woman who chose to build her life again.",
+    "ctaShop": "Shop the collection",
+    "ctaStory": "Read our story",
+    "featuredTitle": "In the store now",
+    "featuredLead": "Hand-picked pieces, ready to order on WhatsApp.",
+    "viewAll": "View all products",
+    "storyTitle": "This is not only a story about love",
+    "storyLead": [
+      "The story of a woman who left her old life behind and travelled to a country she never imagined she would call home.",
+      "A journey through love, hope, pain, lost confidence, and learning to stand on her own again."
+    ],
+    "storyCta": "Start with episode 1",
+    "howTitle": "How ordering works",
+    "howLead": "No accounts, no checkout forms. Just a conversation.",
+    "steps": [
+      {
+        "title": "Choose",
+        "text": "Pick an item and the design you love."
+      },
+      {
+        "title": "Message",
+        "text": "Send your order on WhatsApp. We confirm stock, size and the final price."
+      },
+      {
+        "title": "Pay",
+        "text": "Pay by UPI or in cash, whichever suits you."
+      }
+    ],
+    "pillarsTitle": "What we are building",
+    "pillars": [
+      {
+        "title": "Fashion",
+        "text": "Fashion and online products, chosen one by one."
+      },
+      {
+        "title": "Lifestyle",
+        "text": "Stories, experiences and everyday style."
+      },
+      {
+        "title": "Personal story",
+        "text": "Real experiences and the journey of starting a new life."
+      }
+    ]
+  },
+  "shop": {
+    "title": "Store",
+    "metaTitle": "Store · SK Official",
+    "description": "Browse SK Official eyewear, watches, work pants, shoes, anklets and cushion covers. Order on WhatsApp, pay by UPI or cash.",
+    "lead": "Fashion pieces ready to ship from SK Official. Ordering is easy on WhatsApp.",
+    "filterLabel": "Filter by category",
+    "all": "All",
+    "sortLabel": "Sort by",
+    "sortFeatured": "Featured",
+    "sortLow": "Price: low to high",
+    "sortHigh": "Price: high to low",
+    "count": "{n} products",
+    "countOne": "1 product",
+    "none": "No products in this category yet.",
+    "priceOnRequest": "Price on request",
+    "from": "From {p}",
+    "designs": "{n} designs",
+    "view": "View {name}"
+  },
+  "product": {
+    "metaTitle": "{name} · SK Official",
+    "gallery": "Photos of {name}",
+    "photo": "Photo {n} of {m}",
+    "showPhoto": "Show photo {n}",
+    "design": "Choose a design",
+    "designHint": "Each photo is a design. Pick the one you want.",
+    "designN": "Design {n}",
+    "quantity": "Quantity",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "payment": "How would you like to pay?",
+    "upi": "UPI",
+    "upiHint": "GPay, PhonePe, Paytm or any UPI app",
+    "cash": "Cash",
+    "cashHint": "Pay in cash when you receive your order",
+    "order": "Order on WhatsApp",
+    "orderAlt": "Or message our second line",
+    "addToBag": "Add to bag",
+    "added": "{name} added to your bag.",
+    "total": "Total",
+    "priceConfirm": "The final price is confirmed on WhatsApp before you pay.",
+    "back": "Back to the store",
+    "related": "You may also like",
+    "details": "Good to know",
+    "detailsList": [
+      "We confirm stock, size and colour on WhatsApp before you pay.",
+      "Pay by UPI or in cash.",
+      "Ask us for more photos of any design."
+    ],
+    "prevPhoto": "Previous photo",
+    "nextPhoto": "Next photo"
+  },
+  "bag": {
+    "title": "Your bag",
+    "close": "Close bag",
+    "empty": "Your bag is empty.",
+    "browse": "Browse the store",
+    "remove": "Remove {name}",
+    "subtotal": "Subtotal",
+    "plusConfirm": "Plus {n} item(s) priced on WhatsApp",
+    "name": "Your name (optional)",
+    "note": "Note: size, colour, delivery area (optional)",
+    "send": "Send order on WhatsApp",
+    "clear": "Empty bag",
+    "cleared": "Your bag is now empty."
+  },
+  "msg": {
+    "order": "Hello SK Official! I would like to order:",
+    "interest": "Hello SK Official! I am interested in {name}.",
+    "hello": "Hello SK Official!",
+    "design": "design {n}",
+    "toConfirm": "price to confirm",
+    "total": "Total",
+    "payment": "Payment",
+    "name": "Name",
+    "note": "Note"
+  },
+  "pay": {
+    "title": "Ways to pay",
+    "lead": "We confirm your order on WhatsApp first. Then pay whichever way suits you.",
+    "upiText": "Pay instantly with GPay, PhonePe, Paytm or any UPI app.",
+    "cashText": "Pay in cash when you receive or collect your order.",
+    "upiId": "UPI ID",
+    "copy": "Copy UPI ID",
+    "copied": "UPI ID copied.",
+    "scan": "Scan with any UPI app",
+    "payApp": "Pay {amount} in a UPI app",
+    "upiPending": "We share our UPI ID on WhatsApp when we confirm your order."
+  },
+  "story": {
+    "title": "Our story",
+    "metaTitle": "Our story · SK Official",
+    "description": "My story, my life, my new beginning: the story behind SK Official, told in eight episodes.",
+    "kicker": "My story · My life · My new beginning",
+    "lead": [
+      "The story of a woman who left her old life behind and travelled to a country she never imagined she would call home.",
+      "A journey through love, hope, pain, lost confidence, and learning to stand on her own again.",
+      "This is not only a story about love. It is a story about starting a new life."
+    ],
+    "episodes": "Episodes",
+    "episode": "Episode {n}",
+    "read": "Read episode {n}",
+    "minutes": "{n} min read",
+    "prev": "Previous episode",
+    "next": "Next episode",
+    "all": "All episodes",
+    "translated": "Translated from the original {lang}.",
+    "readOriginal": "Read the original",
+    "end": "That is the story so far. Thank you for reading.",
+    "portraitAlt": "Portrait of the founder of SK Official in sunglasses and a white cap",
+    "mountainAlt": "The founder of SK Official standing on a rock above a green valley with her arms open"
+  },
+  "contact": {
+    "title": "Contact us",
+    "metaTitle": "Contact · SK Official",
+    "description": "Message SK Official on WhatsApp about products, sizes and orders. Pay by UPI or cash.",
+    "lead": "Questions about a product, a size or an order? Message us on WhatsApp and we will reply as soon as we can.",
+    "line1": "WhatsApp line 1",
+    "line2": "WhatsApp line 2",
+    "chat": "Chat on WhatsApp",
+    "call": "Call {number}",
+    "faqTitle": "Questions",
+    "faq": [
+      {
+        "q": "How do I order?",
+        "a": "Open a product, choose a design and tap Order on WhatsApp, or add several items to your bag and send them together. We reply on WhatsApp to confirm."
+      },
+      {
+        "q": "How can I pay?",
+        "a": "By UPI (GPay, PhonePe, Paytm or any UPI app) or in cash. We confirm the order before you pay."
+      },
+      {
+        "q": "Why do some items say \"from\" or show several prices?",
+        "a": "Some items come in several designs at different prices. We confirm the exact price for your design on WhatsApp."
+      },
+      {
+        "q": "Can I see more designs or photos?",
+        "a": "Yes. Message us and we will send photos of everything in stock."
+      }
+    ]
+  },
+  "footer": {
+    "about": "Fashion, stories and a new chapter in life.",
+    "explore": "Explore",
+    "shopBy": "Shop by category",
+    "reach": "Reach us",
+    "payments": "We accept",
+    "rights": "© {year} SK Official. All rights reserved.",
+    "top": "Back to top"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "lead": "The page you were looking for has moved or no longer exists.",
+    "home": "Go to the homepage"
+  },
+  "redirect": "This page has moved."
+}

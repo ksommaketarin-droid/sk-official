@@ -1,0 +1,19 @@
+{
+  "name": "SK Official",
+  "house": "House of Ketty",
+  "url": "https://houseofketty.store",
+  "year": 2026,
+  "whatsapp": [
+    { "id": "line1", "number": "919315559736" },
+    { "id": "line2", "number": "919555134441" }
+  ],
+  "upi": {
+    "id": "",
+    "payee": "SK Official"
+  },
+  "languages": [
+    { "code": "en", "label": "English", "short": "EN", "dir": "ltr", "prefix": "" },
+    { "code": "th", "label": "ไทย", "short": "TH", "dir": "ltr", "prefix": "th" },
+    { "code": "hi", "label": "हिन्दी", "short": "HI", "dir": "ltr", "prefix": "hi" }
+  ]
+}

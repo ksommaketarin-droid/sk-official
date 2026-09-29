@@ -128,7 +128,13 @@ build:
 `.github/workflows/deploy.yml` runs on every push and pull request. It runs
 `npm audit`, the tests, the build and the browser checks. On `main` it also:
 
-1. **GitHub Pages preview** at https://ksommaketarin-droid.github.io/sk-official/
+1. **GitHub Pages**, which serves https://houseofketty.store. DNS at Hostinger
+   has four `A @` records (185.199.108.153, .109, .110, .111) and
+   `CNAME www → ksommaketarin-droid.github.io`, and the domain is set in
+   GitHub → Settings → Pages → Custom domain with **Enforce HTTPS** on.
+   GitHub Pages ignores `.htaccess`, so there the CSP and referrer policy
+   come from each page's `<meta>` tags. The other headers apply only on
+   Hostinger hosting.
 2. **Hostinger production** at https://houseofketty.store, once switched on.
 
 ### Switch on automatic deploys to Hostinger

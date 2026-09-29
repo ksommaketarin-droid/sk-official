@@ -32,7 +32,9 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm run a11y
 
-  # Preview at https://ksommaketarin-droid.github.io/sk-official/
+  # Serves houseofketty.store once the custom domain is set in Settings → Pages
+  # (DNS: four A records to 185.199.108-111.153, www CNAME to
+  # ksommaketarin-droid.github.io). Until then: the github.io preview.
   pages:
     if: github.event_name != 'pull_request'
     needs: test
@@ -52,11 +54,14 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
+      # base_path is "/sk-official" on github.io and empty once the custom
+      # domain (houseofketty.store) is set in Settings → Pages.
+      - id: pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - run: npm run build
         env:
-          BASE_PATH: /sk-official/
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}/
           UPI_ID: ${{ vars.UPI_ID }}
-      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: dist

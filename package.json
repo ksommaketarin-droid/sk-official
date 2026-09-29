@@ -1,0 +1,28 @@
+{
+  "name": "sk-official",
+  "private": true,
+  "version": "2.0.0",
+  "description": "SK Official \u2014 From the House of Ketty. Static site: store, story and contact in English, Thai and Hindi.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node build/build.mjs",
+    "dev": "node build/dev.mjs",
+    "test": "node --test test/*.test.mjs",
+    "a11y": "node test/browser/a11y.mjs",
+    "check": "npm test && npm run build && npm run a11y",
+    "clean-photos": "node build/clean-photos.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@fontsource-variable/cormorant-garamond": "^5.3.0",
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource-variable/noto-sans-devanagari": "^5.3.0",
+    "@fontsource-variable/noto-sans-thai": "^5.3.0",
+    "playwright": "1.63",
+    "qrcode": "^1.5.4",
+    "sharp": "^0.35.5"
+  }
+}

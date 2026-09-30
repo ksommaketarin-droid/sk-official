@@ -5,7 +5,11 @@
     { "id": "clothing", "name": { "en": "Clothing", "th": "เสื้อผ้า", "hi": "कपड़े" } },
     { "id": "footwear", "name": { "en": "Footwear", "th": "รองเท้า", "hi": "जूते-चप्पल" } },
     { "id": "accessories", "name": { "en": "Accessories", "th": "เครื่องประดับ", "hi": "एक्सेसरीज़" } },
-    { "id": "home", "name": { "en": "Home", "th": "ของแต่งบ้าน", "hi": "घर की सजावट" } }
+    { "id": "home", "name": { "en": "Home", "th": "ของแต่งบ้าน", "hi": "घर की सजावट" } },
+{ "id": "beauty", "name": { "en": "Beauty", "th": "บิวตี้", "hi": "ब्यूटी" } },
+{ "id": "hair-care", "name": { "en": "Hair Care", "th": "ดูแลเส้นผม", "hi": "हेयर केयर" } },
+{ "id": "drinkware", "name": { "en": "Drinkware", "th": "แก้วเก็บอุณหภูมิ", "hi": "ड्रिंकवेयर" } },
+{ "id": "hair-accessories", "name": { "en": "Hair Accessories", "th": "อุปกรณ์ผม", "hi": "हेयर एक्सेसरीज़" } }
   ],
   "products": [
     {
@@ -287,6 +291,159 @@
           "th": "ปลอกหมอนอิงลายคริสต์มาส ตุ๊กตาหมีสวมหมวกซานต้า",
           "hi": "सांता टोपी पहने टेडी बियर वाले क्रिसमस कुशन कवर" } }
       ]
+    },
+    {
+      "id": "sk-sunscreen",
+  "name": "SK Daily Sunscreen",
+  "category": "beauty",
+  "featured": true,
+  "price": { "amount": 499 },
+  "summary": {
+    "en": "Daily sunscreen for everyday skincare.",
+    "th": "ครีมกันแดดสำหรับใช้ในชีวิตประจำวัน",
+    "hi": "दैनिक उपयोग के लिए सनस्क्रीन।"
+  },
+  "images": [
+    {
+      "src": "products/IMG-20260930-WA0001.jpg",
+      "alt": {
+        "en": "SK Daily Sunscreen",
+        "th": "SK Daily Sunscreen",
+        "hi": "SK Daily Sunscreen"
+      }
+    }
+  ]
+},
+{
+  "id": "sk-night-cream",
+  "name": "SK Night Glow Cream",
+  "category": "beauty",
+  "featured": true,
+  "price": { "amount": 399 },
+  "summary": {
+    "en": "Night cream for an evening skincare routine.",
+    "th": "ครีมบำรุงสำหรับใช้ในช่วงกลางคืน",
+    "hi": "रात की स्किनकेयर के लिए क्रीम।"
+  },
+  "images": [
+    {
+      "src": "products/IMG-20260930-WA0002.jpg",
+      "alt": {
+        "en": "SK Night Glow Cream",
+        "th": "SK Night Glow Cream",
+        "hi": "SK Night Glow Cream"
+      }
+    }
+  ]
+},
+{
+  "id": "sk-face-masks",
+  "name": "SK Face Mask",
+  "category": "beauty",
+  "featured": true,
+  "price": { "amount": 199 },
+  "summary": {
+    "en": "Face mask for a simple skincare routine.",
+    "th": "มาสก์หน้าสำหรับการดูแลผิว",
+    "hi": "सरल स्किनकेयर के लिए फेस मास्क।"
+  },
+  "images": [
+    {
+      "src": "products/IMG-20260930-WA0005.jpg",
+      "alt": {
+        "en": "SK Face Mask",
+        "th": "SK Face Mask",
+        "hi": "SK Face Mask"
+      }
+    }
+  ]
+},
+{
+  "id": "sk-hair-dye-colour",
+  "name": "SK Hair Colour",
+  "category": "hair-care",
+  "featured": true,
+  "price": { "amount": 199 },
+  "images": [
+    {
+      "src": "products/IMG-20260930-WA0006.jpg",
+      "alt": {
+        "en": "SK Hair Colour",
+        "th": "SK Hair Colour",
+        "hi": "SK Hair Colour"
+      }
+    }
+  ]
+},
+{
+  "id": "sk-hair-dye-mix",
+  "name": "SK Hair Colour Mixing Cream",
+  "category": "hair-care",
+  "price": { "amount": 299 },
+  "images": [
+    {
+      "src": "products/IMG-20260930-WA0007.jpg",
+      "alt": {
+        "en": "SK Hair Colour Mixing Cream",
+        "th": "SK Hair Colour Mixing Cream",
+        "hi": "SK Hair Colour Mixing Cream"
+      }
+    }
+  ]
+},
+{
+  "id": "sk-hair-dye-set",
+  "name": "SK Hair Colour Set",
+  "category": "hair-care",
+  "featured": true,
+  "price": { "amount": 459 },
+  "images": [
+    {
+      "src": "products/IMG-20260930-WA0008.jpg",
+      "alt": {
+        "en": "SK Hair Colour Set",
+        "th": "SK Hair Colour Set",
+        "hi": "SK Hair Colour Set"
+      }
+    }
+  ]
+},
+{
+  "id": "sk-insulated-tumbler",
+  "name": "SK Insulated Tumbler",
+  "category": "drinkware",
+  "featured": true,
+  "price": {
+    "tiers": [
+      { "amounts": [299, 499, 599, 799] }
+    ]
+  },
+  "images": [
+    {
+      "src": "products/IMG-20260930-WA0009.jpg",
+      "alt": {
+        "en": "SK Insulated Tumbler",
+        "th": "แก้วเก็บอุณหภูมิ SK",
+        "hi": "SK इंसुलेटेड टंबलर"
+      }
+    }
+  ]
+},
+{
+  "id": "sk-hair-clips",
+  "name": "SK Hair Clips",
+  "category": "hair-accessories",
+  "featured": true,
+  "price": null,
+  "images": [
+    {
+      "src": "products/IMG-20260930-WA0010.jpg",
+      "alt": {
+        "en": "SK Hair Clips",
+        "th": "กิ๊บติดผม SK",
+"hi": "SK हेयर क्लिप्स"
+      }
     }
   ]
 }
+  

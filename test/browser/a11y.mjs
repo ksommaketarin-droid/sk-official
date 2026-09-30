@@ -149,12 +149,39 @@ console.log('flows');
   await context.close();
 }
 
-// Motion on: the page must still render with animations enabled.
+// Motion on: the page must still render with animations enabled, and the
+// butterfly follows the mouse without ever getting in the way.
 {
   const { page, context, problems } = await open('/', { reducedMotion: 'no-preference' });
+  for (let i = 0; i < 20; i++) await page.mouse.move(300 + i * 10, 400);
+  const bf = page.locator('.butterfly-follow');
+  if ((await bf.count()) !== 1) fail('butterfly did not appear on desktop');
+  else {
+    const info = await bf.evaluate((el) => ({ pe: getComputedStyle(el).pointerEvents, hidden: el.getAttribute('aria-hidden') }));
+    if (info.pe !== 'none' || info.hidden !== 'true') fail(`butterfly is not inert: ${JSON.stringify(info)}`);
+  }
+  const box = await page.getByRole('link', { name: /Shop the collection/ }).boundingBox();
+  await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+  await page.waitForURL(`${BASE}/shop/`).catch(() => fail('butterfly blocked a click on the hero button'));
   await page.mouse.wheel(0, 1600);
   await page.waitForTimeout(400);
   for (const p of problems) fail(`motion: ${p}`);
+  await context.close();
+}
+{
+  const { page, context } = await open('/');
+  await page.mouse.move(400, 400);
+  if (await page.locator('.butterfly').count()) fail('butterfly shown despite reduced motion');
+  await context.close();
+}
+{
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true, reducedMotion: 'no-preference' });
+  const page = await context.newPage();
+  await page.goto(`${BASE}/`, { waitUntil: 'networkidle' });
+  await page.touchscreen.tap(340, 160);
+  if ((await page.locator('.butterfly-tap').count()) !== 1) fail('tap did not release a butterfly');
+  await page.waitForTimeout(1700);
+  if (await page.locator('.butterfly-tap').count()) fail('tap butterfly was not cleaned up');
   await context.close();
 }
 

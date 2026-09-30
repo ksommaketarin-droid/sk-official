@@ -103,7 +103,7 @@ export async function home(ctx) {
   const cards = await Promise.all(featured.map((p) => productCard(ctx, p)));
 
   const body = html`
-  <section class="hero" data-theme="dark" aria-labelledby="hero-title">
+  <section class="hero" data-theme="hero" aria-labelledby="hero-title">
     <div class="hero-bg" aria-hidden="true"><span class="hero-ring"></span><span class="hero-ring hero-ring-2"></span></div>
     <div class="wrap hero-grid">
       <div class="hero-copy">
@@ -143,7 +143,7 @@ export async function home(ctx) {
     </div>
   </section>
 
-  <section class="band" data-theme="dark" aria-labelledby="band-title">
+  <section class="band" aria-labelledby="band-title">
     <div class="band-media">${raw(mountain)}</div>
     <div class="wrap band-content reveal">
       <p class="eyebrow">${t.story.kicker}</p>
@@ -384,7 +384,7 @@ export async function story(ctx) {
   const mountain = await ctx.img.picture('story/mountain.jpg', { alt: t.story.mountainAlt, sizes: '100vw', imgClass: 'band-img', priority: true });
   const portrait = await ctx.img.picture('story/portrait.jpg', { alt: t.story.portraitAlt, sizes: '(min-width: 900px) 380px, 80vw' });
   const body = html`
-  <section class="story-hero" data-theme="dark" aria-labelledby="story-title">
+  <section class="story-hero" aria-labelledby="story-title">
     <div class="band-media">${raw(mountain)}</div>
     <div class="wrap story-hero-content">
       <p class="eyebrow">${t.story.kicker}</p>

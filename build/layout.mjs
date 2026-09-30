@@ -1,5 +1,6 @@
 import { html, raw, json } from './html.mjs';
 import { icon } from './icons.mjs';
+import { flag } from './flags.mjs';
 import { fill, waLink, formatPhone } from '../src/scripts/shared.js';
 
 const NAV = [
@@ -12,7 +13,7 @@ const NAV = [
 export function languageLinks(ctx, page, cls) {
   return html`<ul class="${cls}" role="list">${ctx.site.languages.map((l) => html`
     <li><a href="${ctx.href(page.path, l.code)}" lang="${l.code}" hreflang="${l.code}"
-      ${l.code === ctx.lang ? raw('aria-current="true"') : ''}><span class="lang-name">${l.label}</span></a></li>`)}
+      ${l.code === ctx.lang ? raw('aria-current="true"') : ''}>${flag(l.flag)}<span class="lang-name">${l.label}</span></a></li>`)}
   </ul>`;
 }
 
@@ -21,7 +22,7 @@ function header(ctx, page) {
   const current = ctx.site.languages.find((l) => l.code === ctx.lang);
   return html`
 <a class="skip-link" href="#main">${t.nav.skip}</a>
-<header class="site-header" data-theme="dark">
+<header class="site-header" data-theme="light">
   <div class="wrap header-inner">
     <a class="brand" href="${ctx.href('')}">
       <picture><source type="image/avif" srcset="${ctx.brand['mark-96.avif']}"><img src="${ctx.brand['mark-96.png']}" width="48" height="48" alt=""></picture>
@@ -35,7 +36,7 @@ function header(ctx, page) {
     <div class="header-actions">
       <details class="lang-menu" data-lang-menu>
         <summary aria-label="${t.nav.language}: ${current.label}">
-          ${icon('globe')}<span aria-hidden="true">${current.short}</span>${icon('chevron', 'icon icon-sm')}
+          ${flag(current.flag)}<span aria-hidden="true">${current.short}</span>${icon('chevron', 'icon icon-sm')}
         </summary>
         <div class="lang-panel">${languageLinks(ctx, page, 'lang-list')}</div>
       </details>
@@ -68,7 +69,7 @@ export function whatsappButtons(ctx, text, { primaryLabel, secondaryLabel, compa
 function footer(ctx, page) {
   const { t, site, data } = ctx;
   return html`
-<footer class="site-footer" data-theme="dark">
+<footer class="site-footer" data-theme="footer">
   <div class="footer-glow" aria-hidden="true"></div>
   <div class="wrap footer-grid">
     <div class="footer-brand">
@@ -191,7 +192,7 @@ export function layout(ctx, page) {
 <meta name="description" content="${page.description}">
 <link rel="canonical" href="${canonical}">
 ${site.languages.map((l) => html`<link rel="alternate" hreflang="${l.code}" href="${ctx.abs(page.path, l.code)}">\n`)}<link rel="alternate" hreflang="x-default" href="${ctx.abs(page.path, 'en')}">
-<meta name="theme-color" content="#15100e">
+<meta name="theme-color" content="#fff1f4">
 <meta property="og:type" content="${page.ogType ?? 'website'}">
 <meta property="og:site_name" content="SK Official">
 <meta property="og:title" content="${page.title}">

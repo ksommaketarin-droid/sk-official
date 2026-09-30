@@ -442,6 +442,90 @@ function initCopy() {
   }));
 }
 
+// ---------------------------------------------------------------- butterfly
+// Decorative only: aria-hidden, never takes pointer events, sits under the
+// header and dialogs, and is skipped entirely for reduced motion. Desktop:
+// drifts after the cursor. Touch: each tap releases one that flutters away.
+
+const BUTTERFLY_SVG = '<svg viewBox="-20 -16 40 32" width="30" height="24" focusable="false">'
+  + '<g class="wing wing-l"><g transform="scale(-1 1)"><path d="M0-2C6-16 20-14 17-4 15 2 6 2 0 0Z" fill="#e0457b"/><path d="M0 1C8 2 15 8 10 14 6 17 1 10 0 3Z" fill="#f59a72"/></g></g>'
+  + '<g class="wing wing-r"><path d="M0-2C6-16 20-14 17-4 15 2 6 2 0 0Z" fill="#e0457b"/><path d="M0 1C8 2 15 8 10 14 6 17 1 10 0 3Z" fill="#f59a72"/></g>'
+  + '<path d="M0-7C1.3-4 1.3 6 0 10-1.3 6-1.3-4 0-7Z" fill="#5b1a33"/>'
+  + '<path d="M-.5-6.5C-2-10-4-12-5-12.5M.5-6.5C2-10 4-12 5-12.5" stroke="#5b1a33" stroke-width=".8" fill="none" stroke-linecap="round"/></svg>';
+
+function makeButterfly(extra = '') {
+  const el = document.createElement('div');
+  el.className = `butterfly ${extra}`.trim();
+  el.setAttribute('aria-hidden', 'true');
+  el.innerHTML = BUTTERFLY_SVG; // constant markup, no user data
+  document.body.append(el);
+  return el;
+}
+
+function initButterfly() {
+  if (reducedMotion.matches) return;
+
+  if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    const el = makeButterfly('butterfly-follow');
+    const pos = { x: -100, y: -100 };
+    const target = { x: -100, y: -100 };
+    let angle = 0;
+    let frame = 0;
+    let seen = false;
+    let t = 0;
+
+    const step = () => {
+      t += 1;
+      const dx = target.x - pos.x;
+      const dy = target.y - pos.y;
+      const dist = Math.hypot(dx, dy);
+      pos.x += dx * 0.06;
+      pos.y += dy * 0.06;
+      if (dist > 2) angle += ((Math.atan2(dy, dx) * 180) / Math.PI + 90 - angle) * 0.08;
+      else angle += (0 - angle) * 0.04;
+      const bob = Math.sin(t / 9) * 3;
+      el.style.transform = `translate3d(${pos.x}px, ${pos.y + bob}px, 0) rotate(${angle}deg)`;
+      el.classList.toggle('is-resting', dist < 6);
+      frame = dist > 0.5 || Math.abs(angle) > 0.5 ? requestAnimationFrame(step) : 0;
+    };
+
+    addEventListener('pointermove', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      // Sit a little behind and above the pointer, never on it.
+      target.x = e.clientX + 22;
+      target.y = e.clientY - 26;
+      if (!seen) {
+        seen = true;
+        pos.x = target.x;
+        pos.y = target.y;
+      }
+      el.classList.add('is-visible');
+      if (!frame) frame = requestAnimationFrame(step);
+    }, { passive: true });
+    document.documentElement.addEventListener('mouseleave', () => el.classList.remove('is-visible'));
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden && frame) { cancelAnimationFrame(frame); frame = 0; }
+    });
+  }
+
+  let live = 0;
+  addEventListener('pointerdown', (e) => {
+    if (e.pointerType !== 'touch' || live >= 4) return;
+    live += 1;
+    const el = makeButterfly('butterfly-tap');
+    const drift = (Math.random() - 0.5) * 80;
+    el.style.setProperty('--dx', `${drift}px`);
+    el.style.setProperty('--tilt', `${drift / 3}deg`);
+    el.style.left = `${e.clientX - 15}px`;
+    el.style.top = `${e.clientY - 12}px`;
+    el.addEventListener('animationend', (ev) => {
+      if (ev.target !== el) return;
+      el.remove();
+      live -= 1;
+    });
+  }, { passive: true });
+}
+
 // ---------------------------------------------------------------- boot
 
 if (app) {
@@ -451,4 +535,5 @@ if (app) {
   initShop();
   initOrder(initGallery());
   initCopy();
+  initButterfly();
 }

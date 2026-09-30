@@ -46,7 +46,7 @@ const PAIRS = [
 
 test('every theme defines the full token set', () => {
   const all = themes();
-  assert.deepEqual(Object.keys(all).sort(), ['contact', 'dark', 'home', 'light', 'shop', 'story']);
+  assert.deepEqual(Object.keys(all).sort(), ['contact', 'footer', 'hero', 'home', 'light', 'shop', 'story']);
   for (const [name, t] of Object.entries(all)) {
     for (const [fg, bg] of PAIRS) {
       assert.ok(t[fg] && t[bg], `${name} is missing --${t[fg] ? bg : fg}`);
@@ -66,13 +66,19 @@ test('text and controls meet WCAG AA contrast in every theme', () => {
 });
 
 test('fixed colours over photos and badges stay readable', () => {
-  // Story band text sits on #15100e at 84–94% opacity over the photo; the
-  // worst case is text over the lightest possible blend (white at 16%).
+  // Band and story-hero text sit on a cream overlay (at least 88% opaque)
+  // over the photo; the worst case is that overlay over pure black.
   const blend = (fg, bg, a) => '#' + [1, 3, 5].map((i) => Math.round(parseInt(fg.slice(i, i + 2), 16) * a + parseInt(bg.slice(i, i + 2), 16) * (1 - a)).toString(16).padStart(2, '0')).join('');
-  const dark = themes().dark;
-  const worstBand = blend('#15100e', '#ffffff', 0.84);
-  assert.ok(ratio(dark.text, worstBand) >= TEXT, `band text ${ratio(dark.text, worstBand).toFixed(2)}`);
-  assert.ok(ratio(dark.muted, worstBand) >= TEXT, `band muted ${ratio(dark.muted, worstBand).toFixed(2)}`);
-  const worstBadge = blend('#15100e', '#ffffff', 0.82);
-  assert.ok(ratio('#f6eee8', worstBadge) >= TEXT, `badge ${ratio('#f6eee8', worstBadge).toFixed(2)}`);
+  const all = themes();
+  for (const name of ['home', 'story']) {
+    const worst = blend(all[name].bg, '#000000', 0.88);
+    for (const fg of ['text', 'muted', 'accent']) {
+      assert.ok(ratio(all[name][fg], worst) >= TEXT, `${name} band --${fg}: ${ratio(all[name][fg], worst).toFixed(2)}`);
+    }
+  }
+  // Design-count badge: #8a1044 on white at 94% over a black photo.
+  const badge = blend('#ffffff', '#000000', 0.94);
+  assert.ok(ratio('#8a1044', badge) >= TEXT, `badge ${ratio('#8a1044', badge).toFixed(2)}`);
+  // Toast and skip link: white on raspberry.
+  assert.ok(ratio('#ffffff', '#c2185b') >= TEXT);
 });

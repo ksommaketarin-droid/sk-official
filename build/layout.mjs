@@ -21,7 +21,7 @@ function header(ctx, page) {
   const current = ctx.site.languages.find((l) => l.code === ctx.lang);
   return html`
 <a class="skip-link" href="#main">${t.nav.skip}</a>
-<header class="site-header" data-theme="dark">
+<header class="site-header" data-theme="light">
   <div class="wrap header-inner">
     <a class="brand" href="${ctx.href('')}">
       <picture><source type="image/avif" srcset="${ctx.brand['mark-96.avif']}"><img src="${ctx.brand['mark-96.png']}" width="48" height="48" alt=""></picture>
@@ -68,7 +68,7 @@ export function whatsappButtons(ctx, text, { primaryLabel, secondaryLabel, compa
 function footer(ctx, page) {
   const { t, site, data } = ctx;
   return html`
-<footer class="site-footer" data-theme="dark">
+<footer class="site-footer" data-theme="footer">
   <div class="footer-glow" aria-hidden="true"></div>
   <div class="wrap footer-grid">
     <div class="footer-brand">
@@ -191,7 +191,7 @@ export function layout(ctx, page) {
 <meta name="description" content="${page.description}">
 <link rel="canonical" href="${canonical}">
 ${site.languages.map((l) => html`<link rel="alternate" hreflang="${l.code}" href="${ctx.abs(page.path, l.code)}">\n`)}<link rel="alternate" hreflang="x-default" href="${ctx.abs(page.path, 'en')}">
-<meta name="theme-color" content="#15100e">
+<meta name="theme-color" content="#fff1f4">
 <meta property="og:type" content="${page.ogType ?? 'website'}">
 <meta property="og:site_name" content="SK Official">
 <meta property="og:title" content="${page.title}">

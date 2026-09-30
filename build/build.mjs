@@ -65,7 +65,7 @@ export async function build() {
   const policy = csp();
   const thumbs = Object.fromEntries(await Promise.all(products.map(async (p) => [p.id, await img.src(p.images[0].src, 320)])));
   const upiQr = isUpiId(site.upi.id)
-    ? await QRCode.toString(upiLink({ id: site.upi.id, payee: site.upi.payee }), { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#15100e', light: '#ffffff' } })
+    ? await QRCode.toString(upiLink({ id: site.upi.id, payee: site.upi.payee }), { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#2b1620', light: '#ffffff' } })
     : '';
 
   const langPrefix = (code) => site.languages.find((l) => l.code === code).prefix;
@@ -133,7 +133,7 @@ ${site.languages.map((a) => `    <xhtml:link rel="alternate" hreflang="${a.code}
     fs.writeFile(path.join(OUT, '.nojekyll'), ''),
     fs.writeFile(path.join(OUT, 'manifest.webmanifest'), JSON.stringify({
       name: 'SK Official · House of Ketty', short_name: 'SK Official', start_url: base, scope: base, display: 'standalone',
-      background_color: '#15100e', theme_color: '#15100e',
+      background_color: '#fffaf8', theme_color: '#fff1f4',
       icons: [{ src: brand['icon-192.png'], sizes: '192x192', type: 'image/png' }, { src: brand['icon-512.png'], sizes: '512x512', type: 'image/png' }],
     }, null, 2)),
   ]);

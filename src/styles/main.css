@@ -386,7 +386,6 @@ main:focus { outline: none; }
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 1px solid rgb(194 24 91 / 0.12);
 }
 /* The blur sits on a pseudo-element: backdrop-filter on the header itself
    would make it the containing block for the fixed mobile menu panel. */
@@ -592,11 +591,17 @@ main:focus { outline: none; }
 
 /* ------------------------------------------------------------ hero */
 
+/* Pages that open with a full-bleed hero run it up under the sticky header,
+   so there is no seam between the two. */
+body:has(main > .hero:first-child, main > .story-hero:first-child) main > :first-child {
+  margin-top: calc(-1 * var(--header-h));
+}
+
 .hero {
   position: relative;
   isolation: isolate;
   overflow: clip;
-  padding-block: clamp(3rem, 8vw, 6.5rem) clamp(4rem, 10vw, 8rem);
+  padding-block: calc(var(--header-h) + clamp(3rem, 8vw, 6.5rem)) clamp(4rem, 10vw, 8rem);
   background:
     radial-gradient(55% 65% at 85% 25%, var(--glow), transparent 70%),
     radial-gradient(45% 55% at 5% 95%, var(--glow-2), transparent 70%),
@@ -1180,7 +1185,7 @@ select { padding-right: 2.2rem; }
   min-height: min(82vh, 760px);
   display: grid;
   align-items: end;
-  padding-block: clamp(6rem, 14vw, 10rem) clamp(3rem, 7vw, 5rem);
+  padding-block: calc(var(--header-h) + clamp(4rem, 10vw, 7rem)) clamp(3rem, 7vw, 5rem);
   background: var(--bg);
 }
 .story-hero .band-media::after { background: linear-gradient(180deg, rgb(255 250 240 / 0.05) 0%, rgb(255 250 240 / 0.9) 62%); }
@@ -1566,6 +1571,11 @@ select { padding-right: 2.2rem; }
     @keyframes progress { to { transform: scaleX(1); } }
 
     .site-header { animation: header-shadow linear both; animation-timeline: scroll(root); animation-range: 0 160px; }
+    /* Over the home hero, the header starts clear and frosts in as the page scrolls. */
+    body:has(main > .hero:first-child) .site-header::before {
+      animation: header-fill linear both; animation-timeline: scroll(root); animation-range: 0 120px;
+    }
+    @keyframes header-fill { from { opacity: 0; } }
     @keyframes header-shadow { to { box-shadow: 0 12px 30px -20px rgb(194 24 91 / 0.35); } }
   }
 }

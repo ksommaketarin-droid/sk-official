@@ -1,5 +1,6 @@
 import { html, raw, json } from './html.mjs';
 import { icon } from './icons.mjs';
+import { flag } from './flags.mjs';
 import { fill, waLink, formatPhone } from '../src/scripts/shared.js';
 
 const NAV = [
@@ -12,7 +13,7 @@ const NAV = [
 export function languageLinks(ctx, page, cls) {
   return html`<ul class="${cls}" role="list">${ctx.site.languages.map((l) => html`
     <li><a href="${ctx.href(page.path, l.code)}" lang="${l.code}" hreflang="${l.code}"
-      ${l.code === ctx.lang ? raw('aria-current="true"') : ''}><span class="lang-name">${l.label}</span></a></li>`)}
+      ${l.code === ctx.lang ? raw('aria-current="true"') : ''}>${flag(l.flag)}<span class="lang-name">${l.label}</span></a></li>`)}
   </ul>`;
 }
 
@@ -35,7 +36,7 @@ function header(ctx, page) {
     <div class="header-actions">
       <details class="lang-menu" data-lang-menu>
         <summary aria-label="${t.nav.language}: ${current.label}">
-          ${icon('globe')}<span aria-hidden="true">${current.short}</span>${icon('chevron', 'icon icon-sm')}
+          ${flag(current.flag)}<span aria-hidden="true">${current.short}</span>${icon('chevron', 'icon icon-sm')}
         </summary>
         <div class="lang-panel">${languageLinks(ctx, page, 'lang-list')}</div>
       </details>

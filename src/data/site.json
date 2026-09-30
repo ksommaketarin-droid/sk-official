@@ -4,16 +4,43 @@
   "url": "https://houseofketty.store",
   "year": 2026,
   "whatsapp": [
-    { "id": "line1", "number": "919315559736" },
-    { "id": "line2", "number": "919555134441" }
+    {
+      "id": "line1",
+      "number": "919315559736"
+    },
+    {
+      "id": "line2",
+      "number": "919555134441"
+    }
   ],
   "upi": {
     "id": "9555134441@superyes",
     "payee": "SK Official"
   },
   "languages": [
-    { "code": "en", "label": "English", "short": "EN", "dir": "ltr", "prefix": "" },
-    { "code": "th", "label": "ไทย", "short": "TH", "dir": "ltr", "prefix": "th" },
-    { "code": "hi", "label": "हिन्दी", "short": "HI", "dir": "ltr", "prefix": "hi" }
+    {
+      "code": "en",
+      "label": "English",
+      "short": "EN",
+      "dir": "ltr",
+      "prefix": "",
+      "flag": "gb"
+    },
+    {
+      "code": "th",
+      "label": "ไทย",
+      "short": "TH",
+      "dir": "ltr",
+      "prefix": "th",
+      "flag": "th"
+    },
+    {
+      "code": "hi",
+      "label": "हिन्दी",
+      "short": "HI",
+      "dir": "ltr",
+      "prefix": "hi",
+      "flag": "in"
+    }
   ]
 }

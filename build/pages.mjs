@@ -93,7 +93,7 @@ const crumbLd = (ctx, items) => ({
 
 export async function home(ctx) {
   const { t, lang, data } = ctx;
-  const featured = data.products.filter((p) => p.featured).slice(0, 6);
+const featured = data.products;
   const art = await Promise.all([
     ctx.img.picture('products/sk-charcoal.jpg', { alt: '', sizes: '(min-width: 900px) 24vw, 46vw', priority: true }),
     ctx.img.picture('products/watches-4.jpg', { alt: '', sizes: '(min-width: 900px) 16vw, 32vw', loading: 'eager' }),

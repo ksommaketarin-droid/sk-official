@@ -440,7 +440,7 @@
   "featured": true,
   "price": null,
   "images": [
-    {
+    
       {
       "src": "products/IMG-20260930-WA0010.jpg",
       "alt": {
@@ -503,9 +503,10 @@
             "th": "ช่อดอกไม้แฮนด์เมดหลากสีพร้อมริบบิ้นตกแต่ง",
             "hi": "सजावटी रिबन वाला रंग-बिरंगा हाथ से बना बुके"
           }
-        
+        },
         {
-          "src": "products/IMG-20260930-WA0041.jpg",
+
+  "src": "products/IMG-20260930-WA0041.jpg",
           "alt": {
             "en": "Pink and red handmade rose bouquet",
             "th": "ช่อดอกกุหลาบแฮนด์เมดสีชมพูและแดง",

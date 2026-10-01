@@ -21,7 +21,7 @@ async function productCard(ctx, p, { heading = 'h3' } = {}) {
     <div class="card-body">
       <p class="card-cat">${categoryName(ctx, p.category)}</p>
       ${raw(`<${heading} class="card-title">`)}<a href="${ctx.href(`shop/${p.id}/`)}">${p.name}</a>${raw(`</${heading}>`)}
-      <p class="card-price">${cardPrice(p.price, t.shop)}</p>
+      <p class="card-price">${cardPrice(p.price, t.shop, p.mrp)}</p>
     </div>
   </li>`;
 }

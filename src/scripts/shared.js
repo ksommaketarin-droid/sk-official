@@ -27,13 +27,23 @@ export function priceAmounts(price) {
 export const exactAmount = (price) => (price && typeof price.amount === 'number' ? price.amount : null);
 
 export const lowestAmount = (price) => priceAmounts(price)[0] ?? null;
-
-// Short label for cards: "₹599", "From ₹399", or "Price on request".
-export function cardPrice(price, t) {
+// Short label for cards: current price, MRP, and discount when available.
+export function cardPrice(price, t, mrp) {
   const exact = exactAmount(price);
-  if (exact !== null) return inr(exact);
+
+  if (exact !== null) {
+    if (mrp && typeof mrp.amount === 'number' && mrp.amount > exact) {
+      const discount = Math.round(((mrp.amount - exact) / mrp.amount) * 100);
+      return `${inr(exact)} | ${inr(mrp.amount)} | ${discount}% OFF`;
+    }
+
+    return inr(exact);
+  }
+  
+
   const low = lowestAmount(price);
   return low === null ? t.priceOnRequest : fill(t.from, { p: inr(low) });
+
 }
 
 // Each tier as { label, value }, for the full breakdown on a product page.

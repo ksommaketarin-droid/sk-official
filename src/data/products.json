@@ -297,15 +297,16 @@
     },
     {
       "id": "sk-sunscreen",
-  "name": "SK Daily Sunscreen",
-  "category": "beauty",
+"name": "Venusia Hydra Sunscreen SPF 50+",
+"category": "cosmetics",
   "featured": true,
-  "price": { "amount": 499 },
+"price": { "amount": 449 },
+"mrp": { "amount": 649 },
   "summary": {
-    "en": "Daily sunscreen for everyday skincare.",
-    "th": "ครีมกันแดดสำหรับใช้ในชีวิตประจำวัน",
-    "hi": "दैनिक उपयोग के लिए सनस्क्रीन।"
-  },
+  "en": "Venusia Hydra Sunscreen SPF 50+ for daily sun protection.",
+  "th": "Venusia Hydra Sunscreen SPF 50+ ครีมกันแดดสำหรับใช้ในชีวิตประจำวัน",
+  "hi": "Venusia Hydra Sunscreen SPF 50+ रोज़ाना धूप से सुरक्षा के लिए।"
+},
   "images": [
     {
       "src": "products/IMG-20260930-WA0001.jpg",

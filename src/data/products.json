@@ -6,8 +6,11 @@
     { "id": "clothing", "name": { "en": "Clothing", "th": "เสื้อผ้า", "hi": "कपड़े" } },
     { "id": "footwear", "name": { "en": "Footwear", "th": "รองเท้า", "hi": "जूते-चप्पल" } },
     { "id": "accessories", "name": { "en": "Accessories", "th": "เครื่องประดับ", "hi": "एक्सेसरीज़" } },
-    { "id": "home", "name": { "en": "Home", "th": "ของแต่งบ้าน", "hi": "घर की सजावट" } },
-    { "id": "beauty", "name": { "en": "Beauty", "th": "บิวตี้", "hi": "ब्यूटी" } },
+
+   { "id": "home", "name": { "en": "Home", "th": "ของแต่งบ้าน", "hi": "घर की सजावट" } },
+{ "id": "cosmetics", "name": { "en": "Cosmetics", "th": "เครื่องสำอาง", "hi": "कॉस्मेटिक्स" } },
+{ "id": "beauty", "name": { "en": "Beauty", "th": "บิวตี้", "hi": "ब्यूटी" } },
+   
     { "id": "hair-care", "name": { "en": "Hair Care", "th": "ดูแลเส้นผม", "hi": "हेयर केयर" } },
     { "id": "drinkware", "name": { "en": "Drinkware", "th": "แก้วเก็บอุณหภูมิ", "hi": "ड्रिंकवेयर" } },
     { "id": "hair-accessories", "name": { "en": "Hair Accessories", "th": "อุปกรณ์ผม", "hi": "हेयर एक्सेसरीज़" } },
@@ -255,202 +258,256 @@
           "en": "Silver anklet with small star charms on a black background",
           "th": "สร้อยข้อเท้าสีเงินจี้รูปดาวเล็ก ๆ บนพื้นดำ",
           "hi": "काली पृष्ठभूमि पर छोटे तारों वाली सिल्वर पायल" } },
-        { "src": "products/ankle-bracelets-4.jpg", "alt": {
-          "en": "Grid of eight silver anklet designs on coloured backgrounds",
-          "th": "สร้อยข้อเท้าสีเงินแปดแบบบนพื้นหลังหลากสี",
-          "hi": "रंगीन पृष्ठभूमि पर सिल्वर पायल के आठ डिज़ाइन" } }
+               {        
+          "src": "products/ankle-bracelets-4.jpg",
+          "alt": {
+            "en": "Grid of eight silver anklet designs on coloured backgrounds",
+            "th": "สร้อยข้อเท้าสีเงินแปดแบบบนพื้นหลังหลากสี",
+            "hi": "रंगीन पृष्ठभूमि पर सिल्वर पायल के आठ डिज़ाइन"
+          }
+        }
       ]
     },
     {
       "id": "sk-cushion-covers",
       "name": "SK Cushion Covers",
-      "category": "home",
-      "pickDesign": true,
-      "price": { "tiers": [ { "amounts": [299, 399, 499] } ] },
-      "summary": {
-        "en": "Cushion covers in five designs, from monochrome geometrics to festive prints.",
-        "th": "ปลอกหมอนอิง 5 แบบ ตั้งแต่ลายเรขาคณิตขาวดำไปจนถึงลายเทศกาล",
-        "hi": "पाँच डिज़ाइनों में कुशन कवर, ब्लैक-एंड-व्हाइट ज्यामितीय से लेकर त्योहारी प्रिंट तक।"
-      },
-      "images": [
-        { "src": "products/cushion-covers-1.jpg", "alt": {
-          "en": "Black and white geometric cushion covers on a sofa",
-          "th": "ปลอกหมอนอิงลายเรขาคณิตขาวดำบนโซฟา",
-          "hi": "सोफ़े पर ब्लैक-एंड-व्हाइट ज्यामितीय कुशन कवर" } },
-        { "src": "products/cushion-covers-2.jpg", "alt": {
-          "en": "Red and gold floral cushion covers with a plain cream cover",
-          "th": "ปลอกหมอนอิงลายดอกไม้สีแดงทองกับปลอกสีครีมเรียบ",
-          "hi": "लाल-सुनहरे फूलों वाले कुशन कवर और एक सादा क्रीम कवर" } },
-        { "src": "products/cushion-covers-3.jpg", "alt": {
-          "en": "Mauve cushion covers with a feather print",
-          "th": "ปลอกหมอนอิงสีม่วงอมชมพูลายขนนก",
-          "hi": "पंख प्रिंट वाले मौव रंग के कुशन कवर" } },
-        { "src": "products/cushion-covers-4.jpg", "alt": {
-          "en": "Green cushion covers with colourful animal prints",
-          "th": "ปลอกหมอนอิงสีเขียวลายสัตว์หลากสี",
-          "hi": "रंग-बिरंगे जानवरों के प्रिंट वाले हरे कुशन कवर" } },
-        { "src": "products/cushion-covers-5.jpg", "alt": {
-          "en": "Christmas cushion covers with teddy bears in Santa hats",
-          "th": "ปลอกหมอนอิงลายคริสต์มาส ตุ๊กตาหมีสวมหมวกซานต้า",
-          "hi": "सांता टोपी पहने टेडी बियर वाले क्रिसमस कुशन कवर" } }
-      ]
+        "category": "home",
+  "pickDesign": true,
+  "price": {
+    "tiers": [
+      { "amounts": [299, 399, 499] }
+    ]
+  },
+  "summary": {
+    "en": "Cushion covers in five designs, from monochrome geometrics to festive prints.",
+    "th": "ปลอกหมอนอิง 5 แบบ ตั้งแต่ลายเรขาคณิตขาวดำไปจนถึงลายเทศกาล",
+    "hi": "पाँच डिज़ाइनों में कुशन कवर, ब्लैक-एंड-व्हाइट ज्यामितीय से लेकर त्योहारी प्रिंट तक।"
+  },
+  "images": [
+    {
+      "src": "products/cushion-covers-1.jpg",
+      "alt": {
+        "en": "Black and white geometric cushion covers on a sofa",
+        "th": "ปลอกหมอนอิงลายเรขาคณิตขาวดำบนโซฟา",
+        "hi": "सोफ़े पर ब्लैक-एंड-व्हाइट ज्यामितीय कुशन कवर"
+      }
     },
     {
-      "id": "sk-sunscreen",
-"name": "Venusia Hydra Sunscreen SPF 50+",
-"category": "cosmetics",
-  "featured": true,
-"price": { "amount": 449 },
-"mrp": { "amount": 649 },
-  "summary": {
-  "en": "Venusia Hydra Sunscreen SPF 50+ for daily sun protection.",
-  "th": "Venusia Hydra Sunscreen SPF 50+ ครีมกันแดดสำหรับใช้ในชีวิตประจำวัน",
-  "hi": "Venusia Hydra Sunscreen SPF 50+ रोज़ाना धूप से सुरक्षा के लिए।"
+      "src": "products/cushion-covers-2.jpg",
+      "alt": {
+        "en": "Red and gold floral cushion covers with a plain cream cover",
+        "th": "ปลอกหมอนอิงลายดอกไม้สีแดงทองกับปลอกสีครีมเรียบ",
+        "hi": "लाल-सुनहरे फूलों वाले कुशन कवर और एक सादा क्रीम कवर"
+      }
+    },
+    {
+      "src": "products/cushion-covers-3.jpg",
+      "alt": {
+        "en": "Mauve cushion covers with a feather print",
+        "th": "ปลอกหมอนอิงสีม่วงอมชมพูลายขนนก",
+        "hi": "पंख प्रिंट वाले मौव रंग के कुशन कवर"
+      }
+    },
+    {
+      "src": "products/cushion-covers-4.jpg",
+      "alt": {
+        "en": "Green cushion covers with colourful animal prints",
+        "th": "ปลอกหมอนอิงสีเขียวลายสัตว์หลากสี",
+        "hi": "रंग-बिरंगे जानवरों के प्रिंट वाले हरे कुशन कवर"
+      }
+    },
+    {
+      "src": "products/cushion-covers-5.jpg",
+      "alt": {
+        "en": "Christmas cushion covers with teddy bears in Santa hats",
+        "th": "ปลอกหมอนอิงลายคริสต์มาส ตุ๊กตาหมีสวมหมวกซานต้า",
+        "hi": "सांता टोपी पहने टेडी बियर वाले क्रिसमस कुशन कवर"
+      }
+    }
+  ]
 },
+{
+  
+      
+  "id": "sk-sunscreen",
+  "name": "Venusia Hydra Sunscreen SPF 50+",
+  "category": "cosmetics",
+  "featured": true,
+  "price": { "amount": 449 },
+  "mrp": { "amount": 649 },
+  "summary": {
+    "en": "Venusia Hydra Sunscreen SPF 50+ for daily sun protection.",
+    "th": "Venusia Hydra Sunscreen SPF 50+ ครีมกันแดดสำหรับใช้ในชีวิตประจำวัน",
+    "hi": "Venusia Hydra Sunscreen SPF 50+ रोज़ाना धूप से सुरक्षा के लिए।"
+  },
   "images": [
     {
       "src": "products/IMG-20260930-WA0001.jpg",
       "alt": {
-        "en": "SK Daily Sunscreen",
-        "th": "SK Daily Sunscreen",
-        "hi": "SK Daily Sunscreen"
+        "en": "Venusia Hydra Sunscreen SPF 50+",
+        "th": "Venusia Hydra Sunscreen SPF 50+",
+        "hi": "Venusia Hydra Sunscreen SPF 50+"
       }
     }
   ]
 },
 {
   "id": "sk-night-cream",
-  "name": "SK Night Glow Cream",
-  "category": "beauty",
+  "name": "Dr. Rashel White Skin Night Cream",
+  "category": "cosmetics",
   "featured": true,
-  "price": { "amount": 399 },
+  "price": { "amount": 299 },
+  "mrp": { "amount": 399 },
   "summary": {
-    "en": "Night cream for an evening skincare routine.",
-    "th": "ครีมบำรุงสำหรับใช้ในช่วงกลางคืน",
-    "hi": "रात की स्किनकेयर के लिए क्रीम।"
+    "en": "Dr. Rashel White Skin Night Cream for an evening skincare routine.",
+    "th": "Dr. Rashel White Skin Night Cream ครีมบำรุงผิวสำหรับใช้ในช่วงกลางคืน",
+    "hi": "Dr. Rashel White Skin Night Cream रात की स्किनकेयर के लिए।"
   },
   "images": [
     {
       "src": "products/IMG-20260930-WA0002.jpg",
       "alt": {
-        "en": "SK Night Glow Cream",
-        "th": "SK Night Glow Cream",
-        "hi": "SK Night Glow Cream"
+        "en": "Dr. Rashel White Skin Night Cream",
+        "th": "Dr. Rashel White Skin Night Cream",
+        "hi": "Dr. Rashel White Skin Night Cream"
       }
     }
   ]
 },
 {
   "id": "sk-face-masks",
-  "name": "SK Face Mask",
-  "category": "beauty",
+  "name": "Swiss Beauty Collagen Boost Mask",
+  "category": "cosmetics",
   "featured": true,
   "price": { "amount": 199 },
+  "mrp": { "amount": 299 },
   "summary": {
-    "en": "Face mask for a simple skincare routine.",
-    "th": "มาสก์หน้าสำหรับการดูแลผิว",
-    "hi": "सरल स्किनकेयर के लिए फेस मास्क।"
+    "en": "Swiss Beauty Collagen Boost Mask for a simple skincare routine.",
+    "th": "Swiss Beauty Collagen Boost Mask มาสก์หน้าสำหรับการดูแลผิว",
+    "hi": "Swiss Beauty Collagen Boost Mask सरल स्किनकेयर के लिए।"
   },
   "images": [
     {
       "src": "products/IMG-20260930-WA0005.jpg",
       "alt": {
-        "en": "SK Face Mask",
-        "th": "SK Face Mask",
-        "hi": "SK Face Mask"
+        "en": "Swiss Beauty Collagen Boost Mask",
+        "th": "Swiss Beauty Collagen Boost Mask",
+        "hi": "Swiss Beauty Collagen Boost Mask"
       }
     }
   ]
 },
 {
   "id": "sk-hair-dye-colour",
-  "name": "SK Hair Colour",
-  "category": "hair-care",
+  "name": "Streax ArganSecrets Hair Colour",
+  "category": "cosmetics",
   "featured": true,
   "price": { "amount": 199 },
+  "mrp": { "amount": 249 },
+  "summary": {
+    "en": "Streax ArganSecrets Hair Colour.",
+    "th": "Streax ArganSecrets Hair Colour ผลิตภัณฑ์เปลี่ยนสีผม",
+    "hi": "Streax ArganSecrets Hair Colour बालों को कलर करने के लिए।"
+  },
   "images": [
     {
       "src": "products/IMG-20260930-WA0006.jpg",
       "alt": {
-        "en": "SK Hair Colour",
-        "th": "SK Hair Colour",
-        "hi": "SK Hair Colour"
+        "en": "Streax ArganSecrets Hair Colour",
+        "th": "Streax ArganSecrets Hair Colour",
+        "hi": "Streax ArganSecrets Hair Colour"
       }
     }
   ]
 },
 {
   "id": "sk-hair-dye-mix",
-  "name": "SK Hair Colour Mixing Cream",
-  "category": "hair-care",
-  "price": { "amount": 299 },
+  "name": "Streax ArganSecrets Hair Colour Mixing Cream",
+  "category": "cosmetics",
+  "price": null,
+  "summary": {
+    "en": "Streax ArganSecrets Hair Colour Mixing Cream.",
+    "th": "Streax ArganSecrets Hair Colour Mixing Cream ครีมสำหรับผสมสีผม",
+    "hi": "Streax ArganSecrets Hair Colour Mixing Cream बालों का रंग मिलाने के लिए।"
+  },
   "images": [
     {
       "src": "products/IMG-20260930-WA0007.jpg",
       "alt": {
-        "en": "SK Hair Colour Mixing Cream",
-        "th": "SK Hair Colour Mixing Cream",
-        "hi": "SK Hair Colour Mixing Cream"
+        "en": "Streax ArganSecrets Hair Colour Mixing Cream",
+        "th": "Streax ArganSecrets Hair Colour Mixing Cream",
+        "hi": "Streax ArganSecrets Hair Colour Mixing Cream"
       }
     }
   ]
 },
 {
   "id": "sk-hair-dye-set",
-  "name": "SK Hair Colour Set",
-  "category": "hair-care",
+  "name": "Streax ArganSecrets Hair Colour Set",
+  "category": "cosmetics",
   "featured": true,
-  "price": { "amount": 459 },
+  "price": { "amount": 450 },
+  "mrp": { "amount": 699 },
+  "summary": {
+    "en": "Streax ArganSecrets Hair Colour Set.",
+    "th": "Streax ArganSecrets Hair Colour Set ชุดทำสีผม",
+    "hi": "Streax ArganSecrets Hair Colour Set बालों को कलर करने का सेट।"
+  },
   "images": [
     {
       "src": "products/IMG-20260930-WA0008.jpg",
       "alt": {
-        "en": "SK Hair Colour Set",
-        "th": "SK Hair Colour Set",
-        "hi": "SK Hair Colour Set"
+        "en": "Streax ArganSecrets Hair Colour Set",
+        "th": "Streax ArganSecrets Hair Colour Set",
+        "hi": "Streax ArganSecrets Hair Colour Set"
       }
     }
   ]
 },
 {
-  "id": "sk-insulated-tumbler",
-  "name": "SK Insulated Tumbler",
-  "category": "drinkware",
+  
+"id": "sk-insulated-tumbler",
+"category": "drinkware",
   "featured": true,
-  "price": {
-    "tiers": [
-      { "amounts": [299, 499, 599, 799] }
-    ]
+  "price": { "amount": 259 },
+  "mrp": { "amount": 499 },
+  "summary": {
+    "en": "Insulated tumbler for keeping drinks hot or cold.",
+    "th": "แก้วเก็บอุณหภูมิสำหรับเครื่องดื่มร้อนหรือเย็น",
+    "hi": "गर्म या ठंडे पेय रखने के लिए इंसुलेटेड टंबलर।"
   },
   "images": [
     {
       "src": "products/IMG-20260930-WA0009.jpg",
       "alt": {
-        "en": "SK Insulated Tumbler",
-        "th": "แก้วเก็บอุณหภูมิ SK",
-        "hi": "SK इंसुलेटेड टंबलर"
-      }
-  }
-  ]
-},
-
-{
-  "id": "sk-hair-clips",
-  "name": "SK Hair Clips",
-  "category": "hair-accessories",
-  "featured": true,
-  "price": null,
-  "images": [
-    
-      {
-      "src": "products/IMG-20260930-WA0010.jpg",
-      "alt": {
-        "en": "SK Hair Clips",
-        "th": "กิ๊บติดผม SK",
-        "hi": "SK हेयर क्लिप्स"
+        "en": "White insulated tumbler",
+        "th": "แก้วเก็บอุณหภูมิสีขาว",
+        "hi": "सफेद इंसुलेटेड टंबलर"
       }
     }
   ]
+},
+{
+  "id": "sk-hair-clips",
+  "category": "hair-accessories",
+  "featured": true,
+  "price": { "amount": 99 },
+  "mrp": { "amount": 199 },
+  "summary": {
+    "en": "Leaf hair clips, 5 pieces.",
+    "th": "กิ๊บติดผมลายใบไม้ 5 ชิ้น",
+    "hi": "पत्ते के डिज़ाइन वाली 5 हेयर क्लिप्स।"
+  },
+  "images": [
+    {
+      "src": "products/IMG-20260930-WA0010.jpg",
+      "alt": {
+        "en": "Leaf hair clips, 5 pieces",
+        "th": "กิ๊บติดผมลายใบไม้ 5 ชิ้น",
+        "hi": "पत्ते के डिज़ाइन वाली 5 हेयर क्लिप्स"
+        }
+    ]
+  }
 },
 {
   "id": "sk-flowers",
@@ -458,108 +515,105 @@
   "category": "flowers",
   "featured": true,
   "pickDesign": true,
-      "price": {
-        "tiers": [
-          { "amount": 599 },
-          { "amount": 799 },
-          { "amount": 999 },
-          { "amount": 1099 }
-        ]
-      },
-        "summary": {
-        "en": "Beautiful handmade flower bouquets and gift arrangements in different designs and sizes.",
-        "th": "ช่อดอกไม้และกระเช้าดอกไม้แฮนด์เมด มีหลายแบบและหลายขนาดให้เลือก",
-        "hi": "अलग-अलग डिज़ाइन और आकारों में सुंदर हाथ से बने फूलों के बुके और गिफ्ट अरेंजमेंट।"
-      },
-      "images": [
-        
-        {
-          "src": "products/IMG-20260930-WA0044.jpg",
-          "alt": {
-            "en": "Peach and white handmade flower bouquet with pearl details",
-            "th": "ช่อดอกไม้แฮนด์เมดสีพีชและขาวประดับมุก",
-            "hi": "मोती की सजावट वाला पीच और सफेद हाथ से बना फूलों का बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0045.jpg",
-          "alt": {
-            "en": "Colorful handmade rose flower bouquet",
-            "th": "ช่อดอกไม้กุหลาบแฮนด์เมดสีสันสดใส",
-            "hi": "रंग-बिरंगा हाथ से बना गुलाब का बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0042.jpg",
-          "alt": {
-            "en": "White handmade rose bouquet with pink wrapping and pearl details",
-            "th": "ช่อกุหลาบแฮนด์เมดสีขาวห่อกระดาษชมพูประดับมุก",
-            "hi": "गुलाबी रैपिंग और मोती की सजावट वाला सफेद हाथ से बना गुलाब बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0043.jpg",
-          "alt": {
-            "en": "Colorful handmade flower bouquet with decorative ribbon",
-            "th": "ช่อดอกไม้แฮนด์เมดหลากสีพร้อมริบบิ้นตกแต่ง",
-            "hi": "सजावटी रिबन वाला रंग-बिरंगा हाथ से बना बुके"
-          }
-        },
-        {
-
-  "src": "products/IMG-20260930-WA0041.jpg",
-          "alt": {
-            "en": "Pink and red handmade rose bouquet",
-            "th": "ช่อดอกกุหลาบแฮนด์เมดสีชมพูและแดง",
-            "hi": "गुलाबी और लाल हाथ से बने गुलाब का बुके"
-          }
-        
-        },
-        {
-          "src": "products/IMG-20260930-WA0038.jpg",
-          "alt": {
-            "en": "Colorful handmade flower bouquet with red and yellow flowers",
-            "th": "ช่อดอกไม้แฮนด์เมดหลากสี ดอกไม้สีแดงและเหลือง",
-            "hi": "लाल और पीले फूलों वाला रंग-बिरंगा हाथ से बना बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0039.jpg",
-          "alt": {
-            "en": "Teddy bear and handmade flower gift bouquet",
-            "th": "ช่อของขวัญตุ๊กตาหมีพร้อมดอกไม้แฮนด์เมด",
-            "hi": "टेडी बियर और हाथ से बने फूलों वाला गिफ्ट बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0040.jpg",
-          "alt": {
-            "en": "Hello Kitty themed handmade flower gift bouquet",
-            "th": "ช่อของขวัญดอกไม้แฮนด์เมดธีม Hello Kitty",
-            "hi": "हैलो किटी थीम वाला हाथ से बना फूलों का गिफ्ट बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0036.jpg",
-          "alt": {
-            "en": "Teddy bear handmade flower gift bouquet",
-            "th": "ช่อของขวัญตุ๊กตาหมีพร้อมดอกไม้แฮนด์เมด",
-            "hi": "टेडी बियर और हाथ से बने फूलों वाला गिफ्ट बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0035.jpg",
-          "alt": {
-            "en": "Hello Kitty handmade flower gift arrangement",
-            "th": "ช่อดอกไม้ของขวัญแฮนด์เมดธีม Hello Kitty",
-            "hi": "हैलो किटी थीम वाला हाथ से बना गिफ्ट अरेंजमेंट"
-                    }
-        }
-      ]
+  "price": {
+    "tiers": [
+      { "amount": 599 },
+      { "amount": 799 },
+      { "amount": 999 },
+      { "amount": 1099 }
+    ]
+  },
+  "summary": {
+    "en": "Beautiful handmade flower bouquets and gift arrangements in different designs and sizes.",
+    "th": "ช่อดอกไม้และของขวัญแฮนด์เมด มีหลายแบบและหลายขนาดให้เลือก",
+    "hi": "अलग-अलग डिज़ाइन और आकारों में सुंदर हाथ से बने फूलों के बुके और गिफ्ट अरेंजमेंट।"
+  },
+  "images": [
+    {
+      "src": "products/IMG-20260930-WA0044.jpg",
+      "alt": {
+        "en": "Peach and white handmade flower bouquet with pearl details",
+        "th": "ช่อดอกไม้แฮนด์เมดสีพีชและขาวประดับมุก",
+        "hi": "मोती की सजावट वाला पीच और सफेद हाथ से बना फूलों का बुके"
+      }
+    },
+    {
+      "src": "products/IMG-20260930-WA0045.jpg",
+      "alt": {
+        "en": "Colorful handmade rose flower bouquet",
+        "th": "ช่อดอกไม้กุหลาบแฮนด์เมดสีสันสดใส",
+        "hi": "रंग-बिरंगा हाथ से बना गुलाब का बुके"
+      }
+    },
+    {
+      "src": "products/IMG-20260930-WA0042.jpg",
+      "alt": {
+        "en": "White handmade rose bouquet with pink wrapping and pearl details",
+        "th": "ช่อกุหลาบแฮนด์เมดสีขาวห่อกระดาษชมพูประดับมุก",
+        "hi": "गुलाबी रैपिंग और मोती की सजावट वाला सफेद हाथ से बना गुलाब बुके"
+      }
+    },
+    {
+      "src": "products/IMG-20260930-WA0043.jpg",
+      "alt": {
+        "en": "Colorful handmade flower bouquet with decorative ribbon",
+        "th": "ช่อดอกไม้แฮนด์เมดหลากสีพร้อมริบบิ้นตกแต่ง",
+        "hi": "सजावटी रिबन वाला रंग-बिरंगा हाथ से बना बुके"
+      }
+    },
+    {
+      "src": "products/IMG-20260930-WA0041.jpg",
+      "alt": {
+        "en": "Pink and red handmade rose bouquet",
+        "th": "ช่อดอกกุหลาบแฮนด์เมดสีชมพูและแดง",
+        "hi": "गुलाबी और लाल हाथ से बने गुलाब का बुके"
+      }
+    },
+    {
+      "src": "products/IMG-20260930-WA0038.jpg",
+      "alt": {
+        "en": "Colorful handmade flower bouquet with red and yellow flowers",
+        "th": "ช่อดอกไม้แฮนด์เมดหลากสี ดอกไม้สีแดงและเหลือง",
+        "hi": "लाल और पीले फूलों वाला रंग-बिरंगा हाथ से बना बुके"
+      }
+    },
+    {
+      "src": "products/IMG-20260930-WA0039.jpg",
+      "alt": {
+        "en": "Teddy bear and handmade flower gift bouquet",
+        "th": "ช่อของขวัญตุ๊กตาหมีพร้อมดอกไม้แฮนด์เมด",
+        "hi": "टेडी बियर और हाथ से बने फूलों वाला गिफ्ट बुके"
+      }
+    },
+    {
+      "src": "products/IMG-20260930-WA0040.jpg",
+      "alt": {
+        "en": "Hello Kitty themed handmade flower gift bouquet",
+        "th": "ช่อของขวัญดอกไม้แฮนด์เมดธีม Hello Kitty",
+        "hi": "हैलो किटी थीम वाला हाथ से बना फूलों का गिफ्ट बुके"
+      }
+    },
+    {
+      "src": "products/IMG-20260930-WA0036.jpg",
+      "alt": {
+        "en": "Teddy bear handmade flower gift bouquet",
+        "th": "ช่อของขวัญตุ๊กตาหมีพร้อมดอกไม้แฮนด์เมด",
+        "hi": "टेडी बियर और हाथ से बने फूलों वाला गिफ्ट बुके"
+      }
+    },
+    {
+      "src": "products/IMG-20260930-WA0035.jpg",
+      "alt": {
+        "en": "Hello Kitty handmade flower gift arrangement",
+        "th": "ช่อดอกไม้ของขวัญแฮนด์เมดธีม Hello Kitty",
+        "hi": "हैलो किटी थीम वाला हाथ से बना गिफ्ट अरेंजमेंट"
+      }
     }
+  ]
+},
+    
   
-   ]
- }
+
               
     
  

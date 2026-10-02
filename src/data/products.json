@@ -683,7 +683,9 @@
       "id": "sk-hair-dye-mix",
       "name": "Streax ArganSecrets Hair Colour Mixing Cream",
       "category": "cosmetics",
-      "price": null,
+      "price": {
+  "amount": 299
+},
       "summary": {
         "en": "Streax ArganSecrets Hair Colour Mixing Cream.",
         "th": "Streax ArganSecrets Hair Colour Mixing Cream ครีมสำหรับผสมสีผม",

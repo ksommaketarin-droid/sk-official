@@ -4,6 +4,8 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
+const site = JSON.parse(fs.readFileSync(new URL('../src/data/site.json', import.meta.url), 'utf8'));
+
 // Builds into a temp directory and inspects every generated page.
 let out;
 let pages;
@@ -77,7 +79,7 @@ test('every internal link and asset resolves; external links are WhatsApp, tel o
   for (const { file, html } of pages) {
     for (const [, url] of all(html, /(?:href|src)="([^"]+)"/g)) {
       if (/^https:\/\/wa\.me\/\d+/.test(url) || /^tel:\+\d+$/.test(url) || url.startsWith('upi://') || url.startsWith('#')) continue;
-      if (url.startsWith('https://houseofketty.store/')) continue; // canonical + hreflang
+      if (url.startsWith(`${site.url}/`)) continue; // canonical + hreflang
       if (/^[a-z]+:/i.test(url)) {
         missing.push(`${file} → unexpected external ${url}`);
         continue;

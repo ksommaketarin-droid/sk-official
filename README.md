@@ -1,6 +1,6 @@
 # House of Ketty
 
-The website for **houseofketty.store**: a store, the story behind the brand,
+The House of Ketty website: a store, the story behind the brand,
 and contact details, in English, Thai (`/th/`) and Hindi (`/hi/`).
 
 Customers choose a product and a design, then send the order on WhatsApp. They
@@ -128,14 +128,11 @@ build:
 `.github/workflows/deploy.yml` runs on every push and pull request. It runs
 `npm audit`, the tests, the build and the browser checks. On `main` it also:
 
-1. **GitHub Pages**, which serves https://houseofketty.store. DNS at Hostinger
-   has four `A @` records (185.199.108.153, .109, .110, .111) and
-   `CNAME www → ksommaketarin-droid.github.io`, and the domain is set in
-   GitHub → Settings → Pages → Custom domain with **Enforce HTTPS** on.
+1. **GitHub Pages**, which serves https://ksommaketarin-droid.github.io/sk-official/.
    GitHub Pages ignores `.htaccess`, so there the CSP and referrer policy
    come from each page's `<meta>` tags. The other headers apply only on
    Hostinger hosting.
-2. **Hostinger production** at https://houseofketty.store, once switched on.
+2. **Hostinger production**, once switched on.
 
 ### Switch on automatic deploys to Hostinger
 
@@ -150,8 +147,8 @@ build:
 The upload uses FTPS with certificate checking. If it fails with a TLS error,
 set `FTP_SERVER` to the exact hostname hPanel shows for FTP.
 
-In hPanel, also check that **SSL** is active for houseofketty.store, and that
-the domain points at this hosting plan.
+In hPanel, also check that **SSL** is active for the domain, and that it
+points at this hosting plan.
 
 ### Deploy by hand
 

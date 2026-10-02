@@ -99,8 +99,8 @@
   ],
   "products": [
     {
-      "id": "sk-charcoal",
-      "name": "SK Charcoal",
+      "id": "charcoal",
+      "name": "Charcoal Round Sunglasses",
       "category": "eyewear",
       "featured": true,
       "price": {
@@ -113,18 +113,18 @@
       },
       "images": [
         {
-          "src": "products/sk-charcoal.jpg",
+          "src": "products/charcoal.jpg",
           "alt": {
-            "en": "Woman wearing the SK Charcoal round sunglasses with a tinted charcoal lens",
-            "th": "ผู้หญิงสวมแว่นกันแดดทรงกลม SK Charcoal เลนส์สีชาร์โคล",
-            "hi": "SK Charcoal गोल धूप का चश्मा पहने महिला, चारकोल रंग के लेंस"
+            "en": "Woman wearing the Charcoal round sunglasses with a tinted charcoal lens",
+            "th": "ผู้หญิงสวมแว่นกันแดดทรงกลม Charcoal เลนส์สีชาร์โคล",
+            "hi": "Charcoal गोल धूप का चश्मा पहने महिला, चारकोल रंग के लेंस"
           }
         }
       ]
     },
     {
-      "id": "sk-black",
-      "name": "SK Black",
+      "id": "black",
+      "name": "Black Oval Sunglasses",
       "category": "eyewear",
       "featured": true,
       "price": {
@@ -137,18 +137,18 @@
       },
       "images": [
         {
-          "src": "products/sk-black.jpg",
+          "src": "products/black.jpg",
           "alt": {
-            "en": "Woman outdoors wearing the SK Black oval sunglasses",
-            "th": "ผู้หญิงสวมแว่นกันแดดทรงรี SK Black กลางแจ้ง",
-            "hi": "बाहर SK Black अंडाकार धूप का चश्मा पहने महिला"
+            "en": "Woman outdoors wearing the Black oval sunglasses",
+            "th": "ผู้หญิงสวมแว่นกันแดดทรงรี Black กลางแจ้ง",
+            "hi": "बाहर Black अंडाकार धूप का चश्मा पहने महिला"
           }
         }
       ]
     },
     {
-      "id": "sk-style-01",
-      "name": "SK Style 01",
+      "id": "style-01",
+      "name": "Style 01 Sunglasses",
       "category": "eyewear",
       "price": null,
       "summary": {
@@ -158,18 +158,18 @@
       },
       "images": [
         {
-          "src": "products/sk-style-01.jpg",
+          "src": "products/style-01.jpg",
           "alt": {
-            "en": "Two pairs of SK Style 01 sunglasses with gold rims and dark lenses on a light surface",
-            "th": "แว่นกันแดด SK Style 01 สองคู่ ขอบทอง เลนส์เข้ม วางบนพื้นสีอ่อน",
-            "hi": "हल्की सतह पर रखे सुनहरे रिम और गहरे लेंस वाले SK Style 01 के दो चश्मे"
+            "en": "Two pairs of Style 01 sunglasses with gold rims and dark lenses on a light surface",
+            "th": "แว่นกันแดด Style 01 สองคู่ ขอบทอง เลนส์เข้ม วางบนพื้นสีอ่อน",
+            "hi": "हल्की सतह पर रखे सुनहरे रिम और गहरे लेंस वाले Style 01 के दो चश्मे"
           }
         }
       ]
     },
     {
-      "id": "sk-style-02",
-      "name": "SK Style 02",
+      "id": "style-02",
+      "name": "Style 02 Sunglasses",
       "category": "eyewear",
       "price": null,
       "summary": {
@@ -179,18 +179,18 @@
       },
       "images": [
         {
-          "src": "products/sk-style-02.jpg",
+          "src": "products/style-02.jpg",
           "alt": {
-            "en": "SK Style 02 hexagonal sunglasses resting on a black case",
-            "th": "แว่นกันแดดทรงหกเหลี่ยม SK Style 02 วางบนกล่องสีดำ",
-            "hi": "काले केस पर रखा SK Style 02 षट्कोण धूप का चश्मा"
+            "en": "Style 02 hexagonal sunglasses resting on a black case",
+            "th": "แว่นกันแดดทรงหกเหลี่ยม Style 02 วางบนกล่องสีดำ",
+            "hi": "काले केस पर रखा Style 02 षट्कोण धूप का चश्मा"
           }
         }
       ]
     },
     {
-      "id": "sk-style-03",
-      "name": "SK Style 03",
+      "id": "style-03",
+      "name": "Style 03 Sunglasses",
       "category": "eyewear",
       "price": null,
       "summary": {
@@ -200,18 +200,18 @@
       },
       "images": [
         {
-          "src": "products/sk-style-03.jpg",
+          "src": "products/style-03.jpg",
           "alt": {
-            "en": "SK Style 03 round sunglasses on a wooden table beside a teddy bear",
-            "th": "แว่นกันแดดทรงกลม SK Style 03 บนโต๊ะไม้ ข้างตุ๊กตาหมี",
-            "hi": "लकड़ी की मेज़ पर टेडी बियर के पास रखा SK Style 03 गोल धूप का चश्मा"
+            "en": "Style 03 round sunglasses on a wooden table beside a teddy bear",
+            "th": "แว่นกันแดดทรงกลม Style 03 บนโต๊ะไม้ ข้างตุ๊กตาหมี",
+            "hi": "लकड़ी की मेज़ पर टेडी बियर के पास रखा Style 03 गोल धूप का चश्मा"
           }
         }
       ]
     },
     {
-      "id": "sk-watches",
-      "name": "SK Watches",
+      "id": "watches",
+      "name": "Fashion Watches",
       "category": "watches",
       "featured": true,
       "pickDesign": true,
@@ -284,8 +284,8 @@
       ]
     },
     {
-      "id": "sk-work-pants",
-      "name": "SK Work Pants",
+      "id": "work-pants",
+      "name": "Work Pants",
       "category": "clothing",
       "featured": true,
       "pickDesign": true,
@@ -330,8 +330,8 @@
       ]
     },
     {
-      "id": "sk-mens-shirt",
-      "name": "SK Men's Shirt",
+      "id": "mens-shirt",
+      "name": "Men's Shirt",
       "category": "clothing",
       "price": {
         "amount": 579
@@ -353,8 +353,8 @@
       ]
     },
     {
-      "id": "sk-fashion-shoes",
-      "name": "SK Fashion Shoes",
+      "id": "fashion-shoes",
+      "name": "Fashion Shoes",
       "category": "footwear",
       "featured": true,
       "pickDesign": true,
@@ -435,8 +435,8 @@
       ]
     },
     {
-      "id": "sk-ankle-bracelets",
-      "name": "SK Ankle Bracelets",
+      "id": "ankle-bracelets",
+      "name": "Ankle Bracelets",
       "category": "accessories",
       "featured": true,
       "pickDesign": true,
@@ -508,8 +508,8 @@
       ]
     },
     {
-      "id": "sk-cushion-covers",
-      "name": "SK Cushion Covers",
+      "id": "cushion-covers",
+      "name": "Cushion Covers",
       "category": "home",
       "pickDesign": true,
       "price": {
@@ -572,7 +572,7 @@
       ]
     },
     {
-      "id": "sk-sunscreen",
+      "id": "sunscreen",
       "name": "Venusia Hydra Sunscreen SPF 50+",
       "category": "cosmetics",
       "featured": true,
@@ -599,7 +599,7 @@
       ]
     },
     {
-      "id": "sk-night-cream",
+      "id": "night-cream",
       "name": "Dr. Rashel White Skin Night Cream",
       "category": "cosmetics",
       "featured": true,
@@ -626,7 +626,7 @@
       ]
     },
     {
-      "id": "sk-face-masks",
+      "id": "face-masks",
       "name": "Swiss Beauty Collagen Boost Mask",
       "category": "cosmetics",
       "featured": true,
@@ -653,7 +653,7 @@
       ]
     },
     {
-      "id": "sk-hair-dye-colour",
+      "id": "hair-dye-colour",
       "name": "Streax ArganSecrets Hair Colour",
       "category": "cosmetics",
       "featured": true,
@@ -680,12 +680,12 @@
       ]
     },
     {
-      "id": "sk-hair-dye-mix",
+      "id": "hair-dye-mix",
       "name": "Streax ArganSecrets Hair Colour Mixing Cream",
       "category": "cosmetics",
       "price": {
-  "amount": 299
-},
+        "amount": 299
+      },
       "summary": {
         "en": "Streax ArganSecrets Hair Colour Mixing Cream.",
         "th": "Streax ArganSecrets Hair Colour Mixing Cream ครีมสำหรับผสมสีผม",
@@ -703,7 +703,7 @@
       ]
     },
     {
-      "id": "sk-hair-dye-set",
+      "id": "hair-dye-set",
       "name": "Streax ArganSecrets Hair Colour Set",
       "category": "cosmetics",
       "featured": true,
@@ -730,7 +730,7 @@
       ]
     },
     {
-      "id": "sk-insulated-tumbler",
+      "id": "insulated-tumbler",
       "category": "drinkware",
       "featured": true,
       "price": {
@@ -756,7 +756,7 @@
       ]
     },
     {
-      "id": "sk-hair-clips",
+      "id": "hair-clips",
       "category": "hair-accessories",
       "featured": true,
       "price": {
@@ -782,8 +782,8 @@
       ]
     },
     {
-      "id": "sk-flowers",
-      "name": "SK Flowers",
+      "id": "flowers",
+      "name": "Flowers",
       "category": "flowers",
       "featured": true,
       "pickDesign": true,

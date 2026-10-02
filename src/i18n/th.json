@@ -20,8 +20,8 @@
     "bagCount": "ตะกร้า {n} ชิ้น"
   },
   "home": {
-    "title": "SK Official · แฟชั่น เรื่องราว และไลฟ์สไตล์",
-    "description": "SK Official จาก House of Ketty แว่นตา นาฬิกา เสื้อผ้า รองเท้า และเครื่องประดับ สั่งซื้อผ่าน WhatsApp ชำระด้วย UPI หรือเงินสด",
+    "title": "House of Ketty · แฟชั่น เรื่องราว และไลฟ์สไตล์",
+    "description": "House of Ketty แว่นตา นาฬิกา เสื้อผ้า รองเท้า และเครื่องประดับ สั่งซื้อผ่าน WhatsApp ชำระด้วย UPI หรือเงินสด",
     "heroTitle": "สไตล์สำหรับบทใหม่ของชีวิต",
     "heroLead": "พื้นที่สำหรับแฟชั่น เรื่องราว และบทใหม่ของชีวิต สร้างโดยผู้หญิงคนหนึ่งที่เลือกจะเริ่มต้นชีวิตใหม่อีกครั้ง",
     "ctaShop": "เลือกชมสินค้า",
@@ -69,9 +69,9 @@
   },
   "shop": {
     "title": "ร้านค้า",
-    "metaTitle": "ร้านค้า · SK Official",
-    "description": "เลือกชมแว่นตา นาฬิกา กางเกงทำงาน รองเท้า สร้อยข้อเท้า และปลอกหมอนอิงจาก SK Official สั่งผ่าน WhatsApp ชำระด้วย UPI หรือเงินสด",
-    "lead": "สินค้าแฟชั่นที่มีอยู่พร้อมส่งจาก SK Official สั่งซื้อได้ง่ายผ่าน WhatsApp",
+    "metaTitle": "ร้านค้า · House of Ketty",
+    "description": "เลือกชมแว่นตา นาฬิกา กางเกงทำงาน รองเท้า สร้อยข้อเท้า และปลอกหมอนอิงจาก House of Ketty สั่งผ่าน WhatsApp ชำระด้วย UPI หรือเงินสด",
+    "lead": "สินค้าแฟชั่นที่มีอยู่พร้อมส่งจาก House of Ketty สั่งซื้อได้ง่ายผ่าน WhatsApp",
     "filterLabel": "กรองตามหมวดหมู่",
     "all": "ทั้งหมด",
     "sortLabel": "เรียงตาม",
@@ -87,7 +87,7 @@
     "view": "ดู {name}"
   },
   "product": {
-    "metaTitle": "{name} · SK Official",
+    "metaTitle": "{name} · House of Ketty",
     "gallery": "รูปภาพของ {name}",
     "photo": "รูปที่ {n} จาก {m}",
     "showPhoto": "แสดงรูปที่ {n}",
@@ -134,9 +134,9 @@
     "cleared": "ล้างตะกร้าแล้ว"
   },
   "msg": {
-    "order": "สวัสดีค่ะ/ครับ SK Official ต้องการสั่งซื้อ:",
-    "interest": "สวัสดีค่ะ/ครับ SK Official สนใจ {name}",
-    "hello": "สวัสดีค่ะ/ครับ SK Official",
+    "order": "สวัสดีค่ะ/ครับ House of Ketty ต้องการสั่งซื้อ:",
+    "interest": "สวัสดีค่ะ/ครับ House of Ketty สนใจ {name}",
+    "hello": "สวัสดีค่ะ/ครับ House of Ketty",
     "design": "แบบที่ {n}",
     "toConfirm": "รอยืนยันราคา",
     "total": "รวม",
@@ -158,8 +158,8 @@
   },
   "story": {
     "title": "เรื่องราวของเรา",
-    "metaTitle": "เรื่องราวของเรา · SK Official",
-    "description": "เรื่องราวของฉัน ชีวิตของฉัน การเริ่มต้นใหม่ของฉัน เรื่องราวเบื้องหลัง SK Official ใน 8 ตอน",
+    "metaTitle": "เรื่องราวของเรา · House of Ketty",
+    "description": "เรื่องราวของฉัน ชีวิตของฉัน การเริ่มต้นใหม่ของฉัน เรื่องราวเบื้องหลัง House of Ketty ใน 8 ตอน",
     "kicker": "เรื่องราวของฉัน · ชีวิตของฉัน · การเริ่มต้นใหม่ของฉัน",
     "lead": [
       "เรื่องราวของผู้หญิงคนหนึ่งที่ทิ้งชีวิตเดิมไว้ข้างหลัง และเดินทางไปยังประเทศที่ไม่เคยคิดว่าจะเรียกว่าบ้าน",
@@ -176,13 +176,13 @@
     "translated": "แปลจากต้นฉบับ{lang}",
     "readOriginal": "อ่านต้นฉบับ",
     "end": "นี่คือเรื่องราวจนถึงตอนนี้ ขอบคุณที่อ่านนะคะ",
-    "portraitAlt": "ภาพผู้ก่อตั้ง SK Official สวมแว่นกันแดดและหมวกแก๊ปสีขาว",
-    "mountainAlt": "ผู้ก่อตั้ง SK Official ยืนกางแขนบนก้อนหินเหนือหุบเขาสีเขียว"
+    "portraitAlt": "ภาพผู้ก่อตั้ง House of Ketty สวมแว่นกันแดดและหมวกแก๊ปสีขาว",
+    "mountainAlt": "ผู้ก่อตั้ง House of Ketty ยืนกางแขนบนก้อนหินเหนือหุบเขาสีเขียว"
   },
   "contact": {
     "title": "ติดต่อเรา",
-    "metaTitle": "ติดต่อ · SK Official",
-    "description": "ทัก SK Official ทาง WhatsApp เรื่องสินค้า ไซซ์ และคำสั่งซื้อ ชำระด้วย UPI หรือเงินสด",
+    "metaTitle": "ติดต่อ · House of Ketty",
+    "description": "ทัก House of Ketty ทาง WhatsApp เรื่องสินค้า ไซซ์ และคำสั่งซื้อ ชำระด้วย UPI หรือเงินสด",
     "lead": "มีคำถามเรื่องสินค้า ไซซ์ หรือคำสั่งซื้อ ทักมาทาง WhatsApp ได้เลย เราจะตอบกลับโดยเร็วที่สุด",
     "line1": "WhatsApp ไลน์ 1",
     "line2": "WhatsApp ไลน์ 2",
@@ -214,7 +214,7 @@
     "shopBy": "เลือกตามหมวดหมู่",
     "reach": "ติดต่อเรา",
     "payments": "ช่องทางชำระเงิน",
-    "rights": "© {year} SK Official สงวนลิขสิทธิ์",
+    "rights": "© {year} House of Ketty สงวนลิขสิทธิ์",
     "top": "กลับขึ้นด้านบน"
   },
   "notFound": {

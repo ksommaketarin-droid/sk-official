@@ -1,8 +1,8 @@
 {
-  "name": "sk-official",
+  "name": "house-of-ketty",
   "private": true,
   "version": "2.0.0",
-  "description": "SK Official \u2014 From the House of Ketty. Static site: store, story and contact in English, Thai and Hindi.",
+  "description": "House of Ketty. Static site: store, story and contact in English, Thai and Hindi.",
   "type": "module",
   "engines": {
     "node": ">=20"

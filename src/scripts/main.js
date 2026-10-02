@@ -71,7 +71,7 @@ function initLangMenu() {
 // Stored data is untrusted: anything that is not a known product id with a
 // sane design and quantity is dropped on read.
 
-const BAG_KEY = 'sk-official-bag-v1';
+const BAG_KEY = 'house-of-ketty-bag-v1';
 
 function readBag() {
   let raw;

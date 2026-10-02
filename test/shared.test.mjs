@@ -59,13 +59,13 @@ test('WhatsApp links are encoded and only ever point at wa.me digits', () => {
 
 test('order message lists items, totals priced ones and flags the rest', () => {
   const text = orderMessage([
-    { name: 'SK Charcoal', qty: 2, design: null, amount: 599 },
-    { name: 'SK Watches', qty: 1, design: 3, amount: null },
+    { name: 'Charcoal Round Sunglasses', qty: 2, design: null, amount: 599 },
+    { name: 'Fashion Watches', qty: 1, design: 3, amount: null },
   ], { payment: 'UPI', name: ' Asha ', note: '' }, msg);
   assert.equal(text, [
     'Order:', '',
-    '• 2 × SK Charcoal: ₹1,198',
-    '• 1 × SK Watches (design 3): price to confirm',
+    '• 2 × Charcoal Round Sunglasses: ₹1,198',
+    '• 1 × Fashion Watches (design 3): price to confirm',
     '', 'Total: ₹1,198 + price to confirm',
     'Payment: UPI',
     'Name: Asha',
@@ -81,9 +81,9 @@ test('order message cleans visitor input', () => {
 test('UPI links need a real VPA and carry the amount', () => {
   assert.equal(isUpiId(''), false);
   assert.equal(isUpiId('not an id'), false);
-  assert.equal(isUpiId('skofficial@okaxis'), true);
-  assert.equal(upiLink({ id: '', payee: 'SK' }), null);
-  assert.equal(upiLink({ id: 'sk@upi', payee: 'SK Official', amount: 599 }), 'upi://pay?pa=sk%40upi&pn=SK+Official&cu=INR&am=599.00');
+  assert.equal(isUpiId('shop@okaxis'), true);
+  assert.equal(upiLink({ id: '', payee: 'House of Ketty' }), null);
+  assert.equal(upiLink({ id: 'hok@upi', payee: 'House of Ketty', amount: 599 }), 'upi://pay?pa=hok%40upi&pn=House+of+Ketty&cu=INR&am=599.00');
 });
 
 test('phone numbers are shown in Indian format', () => {

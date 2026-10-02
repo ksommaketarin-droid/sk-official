@@ -1,4 +1,4 @@
-# SK Official · From the House of Ketty
+# House of Ketty
 
 The website for **houseofketty.store**: a store, the story behind the brand,
 and contact details, in English, Thai (`/th/`) and Hindi (`/hi/`).

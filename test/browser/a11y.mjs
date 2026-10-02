@@ -50,7 +50,7 @@ async function open(url, { viewport = { width: 1280, height: 900 }, reducedMotio
 console.log(`axe on ${pages.length} pages`);
 for (const url of pages) {
   for (const viewport of [{ width: 1280, height: 900 }, { width: 375, height: 800 }]) {
-    if (viewport.width < 1000 && !/^\/((th|hi)\/)?(|shop\/|shop\/sk-watches\/|story\/ep01\/|contact\/)$/.test(url)) continue;
+    if (viewport.width < 1000 && !/^\/((th|hi)\/)?(|shop\/|shop\/watches\/|story\/ep01\/|contact\/)$/.test(url)) continue;
     const { page, context, problems } = await open(url, { viewport });
     // Expanded states matter too: scan with the bag open on one page.
     const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice']).analyze();
@@ -68,11 +68,11 @@ console.log('flows');
 
 // Product page: design, quantity and payment all reach the WhatsApp message.
 {
-  const { page, context, problems } = await open('/shop/sk-mens-shirt/');
+  const { page, context, problems } = await open('/shop/mens-shirt/');
   await page.getByRole('button', { name: 'Increase quantity' }).click();
   await page.locator('form.order').getByRole('radio', { name: /^Cash/ }).check();
   const href = decodeURIComponent(await page.getByRole('link', { name: 'Order on WhatsApp' }).getAttribute('href'));
-  if (!href.includes('2 × SK Men\'s Shirt: ₹1,158')) fail(`order message missing line: ${href}`);
+  if (!href.includes('2 × Men\'s Shirt: ₹1,158')) fail(`order message missing line: ${href}`);
   if (!href.includes('Payment: Cash')) fail('order message missing payment');
   if ((await page.locator('[data-total]').textContent()) !== '₹1,158') fail('total not updated');
   for (const p of problems) fail(`product flow: ${p}`);
@@ -80,10 +80,10 @@ console.log('flows');
 }
 
 {
-  const { page, context, problems } = await open('/shop/sk-watches/');
+  const { page, context, problems } = await open('/shop/watches/');
   await page.locator('form.order').getByRole('radio', { name: 'Design 3' }).check();
   const href = decodeURIComponent(await page.getByRole('link', { name: 'Order on WhatsApp' }).getAttribute('href'));
-  if (!href.includes('SK Watches (design 3)')) fail(`design not in message: ${href}`);
+  if (!href.includes('Fashion Watches (design 3)')) fail(`design not in message: ${href}`);
   const current = await page.locator('[data-thumb][aria-current]').getAttribute('data-thumb');
   if (current !== '2') fail(`gallery did not follow design (thumb ${current})`);
 
@@ -98,13 +98,13 @@ console.log('flows');
   for (const v of bagAxe.violations) fail(`bag dialog: ${v.id} ${v.help}`);
   await page.getByLabel('Your name (optional)').fill('Asha‮');
   const bagHref = decodeURIComponent(await dialog.getByRole('link', { name: 'Send order on WhatsApp' }).getAttribute('href'));
-  if (!bagHref.includes('1 × SK Watches (design 3): price to confirm') || !bagHref.includes('Name: Asha\n') && !bagHref.endsWith('Name: Asha')) fail(`bag message wrong: ${bagHref}`);
+  if (!bagHref.includes('1 × Fashion Watches (design 3): price to confirm') || !bagHref.includes('Name: Asha\n') && !bagHref.endsWith('Name: Asha')) fail(`bag message wrong: ${bagHref}`);
   await page.keyboard.press('Escape');
   if (await dialog.isVisible()) fail('Escape did not close the bag');
   if (!(await bagButton.evaluate((el) => el === document.activeElement))) fail('focus did not return to the bag button');
 
   // Tampered storage is ignored rather than rendered.
-  await page.evaluate(() => localStorage.setItem('sk-official-bag-v1', JSON.stringify([{ id: '<img src=x onerror=alert(1)>', qty: 5 }, { id: 'sk-black', qty: 999, design: 'x' }])));
+  await page.evaluate(() => localStorage.setItem('house-of-ketty-bag-v1', JSON.stringify([{ id: '<img src=x onerror=alert(1)>', qty: 5 }, { id: 'black', qty: 999, design: 'x' }])));
   await page.reload({ waitUntil: 'networkidle' });
   if ((await bagButton.getAttribute('aria-label')) !== 'Bag, 20 items') fail(`tampered bag not sanitised: ${await bagButton.getAttribute('aria-label')}`);
   for (const p of problems) fail(`bag flow: ${p}`);
@@ -121,7 +121,7 @@ console.log('flows');
   if ((await page.locator('[data-count]').textContent()) !== '1 product') fail('count not announced');
   await page.selectOption('#sort', 'high');
   const first = await page.locator('.product-card:visible .card-title').first().textContent();
-  if (first.trim() !== 'SK Watches') fail(`sort broke filter: ${first}`);
+  if (first.trim() !== 'Fashion Watches') fail(`sort broke filter: ${first}`);
   await page.goto(`${BASE}/shop/?c=home`, { waitUntil: 'networkidle' });
   if ((await page.getByRole('button', { name: 'Home' }).getAttribute('aria-pressed')) !== 'true') fail('?c= not restored');
   for (const p of problems) fail(`shop flow: ${p}`);

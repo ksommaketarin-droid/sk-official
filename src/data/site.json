@@ -1,6 +1,5 @@
 {
-  "name": "SK Official",
-  "house": "House of Ketty",
+  "name": "House of Ketty",
   "url": "https://houseofketty.store",
   "year": 2026,
   "whatsapp": [
@@ -15,7 +14,7 @@
   ],
   "upi": {
     "id": "9555134441@superyes",
-    "payee": "SK Official"
+    "payee": "House of Ketty"
   },
   "languages": [
     {

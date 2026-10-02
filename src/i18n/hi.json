@@ -20,8 +20,8 @@
     "bagCount": "बैग, {n} आइटम"
   },
   "home": {
-    "title": "SK Official · फ़ैशन, कहानी और लाइफ़स्टाइल",
-    "description": "SK Official, House of Ketty से: चश्मे, घड़ियाँ, कपड़े, जूते-चप्पल और एक्सेसरीज़। WhatsApp पर ऑर्डर करें, UPI या कैश से भुगतान करें।",
+    "title": "House of Ketty · फ़ैशन, कहानी और लाइफ़स्टाइल",
+    "description": "House of Ketty: चश्मे, घड़ियाँ, कपड़े, जूते-चप्पल और एक्सेसरीज़। WhatsApp पर ऑर्डर करें, UPI या कैश से भुगतान करें।",
     "heroTitle": "ज़िंदगी के नए अध्याय के लिए स्टाइल",
     "heroLead": "फ़ैशन, कहानियों और ज़िंदगी के नए अध्याय के लिए एक जगह, जिसे एक ऐसी महिला ने बनाया जिसने अपनी ज़िंदगी फिर से शुरू करने का फ़ैसला किया।",
     "ctaShop": "कलेक्शन देखें",
@@ -69,9 +69,9 @@
   },
   "shop": {
     "title": "स्टोर",
-    "metaTitle": "स्टोर · SK Official",
-    "description": "SK Official के चश्मे, घड़ियाँ, वर्क पैंट, जूते, पायल और कुशन कवर देखें। WhatsApp पर ऑर्डर करें, UPI या कैश से भुगतान करें।",
-    "lead": "SK Official के फ़ैशन आइटम, भेजने के लिए तैयार। WhatsApp पर ऑर्डर करना आसान है।",
+    "metaTitle": "स्टोर · House of Ketty",
+    "description": "House of Ketty के चश्मे, घड़ियाँ, वर्क पैंट, जूते, पायल और कुशन कवर देखें। WhatsApp पर ऑर्डर करें, UPI या कैश से भुगतान करें।",
+    "lead": "House of Ketty के फ़ैशन आइटम, भेजने के लिए तैयार। WhatsApp पर ऑर्डर करना आसान है।",
     "filterLabel": "कैटेगरी के अनुसार देखें",
     "all": "सभी",
     "sortLabel": "क्रम",
@@ -87,7 +87,7 @@
     "view": "{name} देखें"
   },
   "product": {
-    "metaTitle": "{name} · SK Official",
+    "metaTitle": "{name} · House of Ketty",
     "gallery": "{name} की तस्वीरें",
     "photo": "तस्वीर {n} / {m}",
     "showPhoto": "तस्वीर {n} दिखाएँ",
@@ -134,9 +134,9 @@
     "cleared": "आपका बैग अब खाली है।"
   },
   "msg": {
-    "order": "नमस्ते SK Official! मुझे यह ऑर्डर करना है:",
-    "interest": "नमस्ते SK Official! मुझे {name} में दिलचस्पी है।",
-    "hello": "नमस्ते SK Official!",
+    "order": "नमस्ते House of Ketty! मुझे यह ऑर्डर करना है:",
+    "interest": "नमस्ते House of Ketty! मुझे {name} में दिलचस्पी है।",
+    "hello": "नमस्ते House of Ketty!",
     "design": "डिज़ाइन {n}",
     "toConfirm": "कीमत कन्फ़र्म करनी है",
     "total": "कुल",
@@ -158,8 +158,8 @@
   },
   "story": {
     "title": "हमारी कहानी",
-    "metaTitle": "हमारी कहानी · SK Official",
-    "description": "मेरी कहानी, मेरी ज़िंदगी, मेरी नई शुरुआत: SK Official के पीछे की कहानी, आठ एपिसोड में।",
+    "metaTitle": "हमारी कहानी · House of Ketty",
+    "description": "मेरी कहानी, मेरी ज़िंदगी, मेरी नई शुरुआत: House of Ketty के पीछे की कहानी, आठ एपिसोड में।",
     "kicker": "मेरी कहानी · मेरी ज़िंदगी · मेरी नई शुरुआत",
     "lead": [
       "एक महिला की कहानी जिसने अपनी पुरानी ज़िंदगी पीछे छोड़ दी और एक ऐसे देश आई जिसे उसने कभी अपना घर कहने की कल्पना नहीं की थी।",
@@ -176,13 +176,13 @@
     "translated": "मूल {lang} से अनुवादित।",
     "readOriginal": "मूल पढ़ें",
     "end": "अब तक की कहानी यही है। पढ़ने के लिए धन्यवाद।",
-    "portraitAlt": "धूप का चश्मा और सफ़ेद टोपी पहने SK Official की संस्थापक",
-    "mountainAlt": "हरी घाटी के ऊपर चट्टान पर बाँहें फैलाए खड़ी SK Official की संस्थापक"
+    "portraitAlt": "धूप का चश्मा और सफ़ेद टोपी पहने House of Ketty की संस्थापक",
+    "mountainAlt": "हरी घाटी के ऊपर चट्टान पर बाँहें फैलाए खड़ी House of Ketty की संस्थापक"
   },
   "contact": {
     "title": "संपर्क करें",
-    "metaTitle": "संपर्क · SK Official",
-    "description": "प्रोडक्ट, साइज़ और ऑर्डर के बारे में SK Official को WhatsApp पर मैसेज करें। UPI या कैश से भुगतान करें।",
+    "metaTitle": "संपर्क · House of Ketty",
+    "description": "प्रोडक्ट, साइज़ और ऑर्डर के बारे में House of Ketty को WhatsApp पर मैसेज करें। UPI या कैश से भुगतान करें।",
     "lead": "किसी प्रोडक्ट, साइज़ या ऑर्डर के बारे में सवाल है? हमें WhatsApp पर मैसेज करें, हम जल्द से जल्द जवाब देंगे।",
     "line1": "WhatsApp लाइन 1",
     "line2": "WhatsApp लाइन 2",
@@ -214,7 +214,7 @@
     "shopBy": "कैटेगरी",
     "reach": "संपर्क",
     "payments": "हम स्वीकार करते हैं",
-    "rights": "© {year} SK Official. सर्वाधिकार सुरक्षित।",
+    "rights": "© {year} House of Ketty. सर्वाधिकार सुरक्षित।",
     "top": "ऊपर जाएँ"
   },
   "notFound": {

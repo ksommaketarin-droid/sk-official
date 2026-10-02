@@ -26,7 +26,7 @@ function header(ctx, page) {
   <div class="wrap header-inner">
     <a class="brand" href="${ctx.href('')}">
       <picture><source type="image/avif" srcset="${ctx.brand['mark-96.avif']}"><img src="${ctx.brand['mark-96.png']}" width="48" height="48" alt=""></picture>
-      <span class="brand-text"><span class="brand-name">SK Official</span><span class="brand-house">${ctx.site.house}</span></span>
+      <span class="brand-text"><span class="brand-name">${ctx.site.name}</span></span>
     </a>
     <nav class="site-nav" id="site-nav" aria-label="${t.nav.main}" data-nav>
       <ul role="list">${NAV.map(([key, path]) => html`
@@ -75,7 +75,7 @@ function footer(ctx, page) {
     <div class="footer-brand">
       <a class="brand brand-lg" href="${ctx.href('')}">
         <img src="${ctx.brand['mark-240.png']}" width="72" height="72" alt="" loading="lazy">
-        <span class="brand-text"><span class="brand-name">SK Official</span><span class="brand-house">${site.house}</span></span>
+        <span class="brand-text"><span class="brand-name">${site.name}</span></span>
       </a>
       <p>${t.footer.about}</p>
       <p class="footer-tagline">${t.tagline}</p>
@@ -194,7 +194,7 @@ export function layout(ctx, page) {
 ${site.languages.map((l) => html`<link rel="alternate" hreflang="${l.code}" href="${ctx.abs(page.path, l.code)}">\n`)}<link rel="alternate" hreflang="x-default" href="${ctx.abs(page.path, 'en')}">
 <meta name="theme-color" content="#fff1f4">
 <meta property="og:type" content="${page.ogType ?? 'website'}">
-<meta property="og:site_name" content="SK Official">
+<meta property="og:site_name" content="${site.name}">
 <meta property="og:title" content="${page.title}">
 <meta property="og:description" content="${page.description}">
 <meta property="og:url" content="${canonical}">

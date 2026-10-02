@@ -9,7 +9,7 @@ let out;
 let pages;
 
 before(async () => {
-  process.env.OUT_DIR = fs.mkdtempSync(path.join(os.tmpdir(), 'sk-build-'));
+  process.env.OUT_DIR = fs.mkdtempSync(path.join(os.tmpdir(), 'hok-build-'));
   const { build } = await import('../build/build.mjs');
   ({ out } = await build());
   pages = fs.readdirSync(out, { recursive: true })

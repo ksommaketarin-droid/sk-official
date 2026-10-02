@@ -1,4 +1,4 @@
-/* SK Official · From the House of Ketty
+/* House of Ketty
    Colour tokens live on [data-theme]. Every text/background pair is checked
    for WCAG AA contrast by test/contrast.test.mjs, so change them there too. */
 
@@ -431,13 +431,6 @@ main:focus { outline: none; }
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.brand-house {
-  font-size: 0.6875rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--primary);
-}
-
 .site-nav ul {
   display: flex;
   gap: 0.25rem;
@@ -563,7 +556,6 @@ main:focus { outline: none; }
 .js .menu-toggle[hidden] { display: inline-grid; }
 
 @media (max-width: 899px) {
-  .brand-house { display: none; }
   .brand-name { font-size: 1.2rem; letter-spacing: 0.04em; }
   .brand img { width: 42px; height: 42px; }
   .header-inner { gap: 0.5rem; }

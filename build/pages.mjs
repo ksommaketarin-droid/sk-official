@@ -95,7 +95,7 @@ export async function home(ctx) {
   const { t, lang, data } = ctx;
 const featured = data.products;
   const art = await Promise.all([
-    ctx.img.picture('products/sk-charcoal.jpg', { alt: '', sizes: '(min-width: 900px) 24vw, 46vw', priority: true }),
+    ctx.img.picture('products/charcoal.jpg', { alt: '', sizes: '(min-width: 900px) 24vw, 46vw', priority: true }),
     ctx.img.picture('products/watches-4.jpg', { alt: '', sizes: '(min-width: 900px) 16vw, 32vw', loading: 'eager' }),
     ctx.img.picture('products/shoes-7.jpg', { alt: '', sizes: '(min-width: 900px) 16vw, 32vw', loading: 'eager' }),
   ]);
@@ -124,7 +124,7 @@ const featured = data.products;
         <div class="arch arch-main" data-depth="1">${raw(art[0])}</div>
         <div class="arch arch-side arch-a" data-depth="2">${raw(art[1])}</div>
         <div class="arch arch-side arch-b" data-depth="3">${raw(art[2])}</div>
-        <span class="hero-monogram">SK</span>
+        <span class="hero-monogram">K</span>
       </div>
     </div>
   </section>
@@ -186,7 +186,7 @@ const featured = data.products;
   return {
     path: '', nav: 'home', theme: 'home', title: t.home.title, description: t.home.description, body,
     jsonld: [
-      { '@context': 'https://schema.org', '@type': 'WebSite', name: 'SK Official', alternateName: 'House of Ketty', url: ctx.abs(''), inLanguage: lang },
+      { '@context': 'https://schema.org', '@type': 'WebSite', name: ctx.site.name, url: ctx.abs(''), inLanguage: lang },
       orgLd(ctx),
     ],
   };
@@ -194,7 +194,7 @@ const featured = data.products;
 
 function orgLd(ctx) {
   return {
-    '@context': 'https://schema.org', '@type': 'OnlineStore', name: 'SK Official', alternateName: 'House of Ketty',
+    '@context': 'https://schema.org', '@type': 'OnlineStore', name: ctx.site.name,
     url: ctx.abs('', 'en'), logo: ctx.abs(ctx.brand['icon-512.png'], null), currenciesAccepted: 'INR', paymentAccepted: 'UPI, Cash',
     contactPoint: ctx.site.whatsapp.map((w) => ({ '@type': 'ContactPoint', telephone: formatPhone(w.number), contactType: 'customer service', availableLanguage: ['English', 'Thai', 'Hindi'] })),
   };
@@ -370,7 +370,7 @@ export async function product(ctx, p) {
     body,
     jsonld: [
       { '@context': 'https://schema.org', '@type': 'Product', name: p.name, description: p.summary[lang], category: categoryName(ctx, p.category),
-        brand: { '@type': 'Brand', name: 'SK Official' }, image: await Promise.all(p.images.map(async (im) => ctx.abs(await ctx.img.src(im.src, 1200), null))),
+        brand: { '@type': 'Brand', name: ctx.site.name }, image: await Promise.all(p.images.map(async (im) => ctx.abs(await ctx.img.src(im.src, 1200), null))),
         ...(offers ? { offers } : {}) },
       crumbLd(ctx, crumbs),
     ],
@@ -458,11 +458,11 @@ export async function episode(ctx, ep, index) {
   </article>`;
   return {
     path: `story/${ep.id}/`, nav: 'story', theme: 'story', ogType: 'article',
-    title: `${title} · SK Official`, description: ep.teaser[lang], body,
+    title: `${title} · ${ctx.site.name}`, description: ep.teaser[lang], body,
     jsonld: [
       { '@context': 'https://schema.org', '@type': 'Article', headline: ep.title[lang], description: ep.teaser[lang], inLanguage: lang,
         isPartOf: { '@type': 'CreativeWorkSeries', name: t.story.title }, position: n,
-        author: { '@type': 'Organization', name: 'SK Official' }, publisher: { '@type': 'Organization', name: 'SK Official' },
+        author: { '@type': 'Organization', name: ctx.site.name }, publisher: { '@type': 'Organization', name: ctx.site.name },
         ...(translated ? { translationOfWork: { '@type': 'Article', url: ctx.abs(`story/${ep.id}/`, ep.original), inLanguage: ep.original } } : {}) },
       crumbLd(ctx, crumbs),
     ],
@@ -521,5 +521,5 @@ export async function notFound(ctx) {
   const body = html`
   ${pageHead(ctx, { kicker: '404', title: t.notFound.title, lead: t.notFound.lead,
     extra: html`<div class="button-row"><a class="btn btn-primary" href="${ctx.href('')}">${t.notFound.home}</a><a class="btn btn-secondary" href="${ctx.href('shop/')}">${t.nav.shop}</a></div>` })}`;
-  return { path: '404.html', nav: null, theme: 'contact', title: `${t.notFound.title} · SK Official`, description: t.notFound.lead, body, noindex: true };
+  return { path: '404.html', nav: null, theme: 'contact', title: `${t.notFound.title} · ${ctx.site.name}`, description: t.notFound.lead, body, noindex: true };
 }

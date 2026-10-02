@@ -132,7 +132,7 @@ ${site.languages.map((a) => `    <xhtml:link rel="alternate" hreflang="${a.code}
     fs.writeFile(path.join(OUT, '.well-known/security.txt'), securityTxt({ site, expires })),
     fs.writeFile(path.join(OUT, '.nojekyll'), ''),
     fs.writeFile(path.join(OUT, 'manifest.webmanifest'), JSON.stringify({
-      name: 'SK Official · House of Ketty', short_name: 'SK Official', start_url: base, scope: base, display: 'standalone',
+      name: site.name, short_name: site.name, start_url: base, scope: base, display: 'standalone',
       background_color: '#fffaf8', theme_color: '#fff1f4',
       icons: [{ src: brand['icon-192.png'], sizes: '192x192', type: 'image/png' }, { src: brand['icon-512.png'], sizes: '512x512', type: 'image/png' }],
     }, null, 2)),

@@ -20,8 +20,8 @@
     "bagCount": "Bag, {n} items"
   },
   "home": {
-    "title": "SK Official · Fashion, story and lifestyle",
-    "description": "SK Official, from the House of Ketty: eyewear, watches, clothing, footwear and accessories, with ordering on WhatsApp and payment by UPI or cash.",
+    "title": "House of Ketty · Fashion, story and lifestyle",
+    "description": "House of Ketty: eyewear, watches, clothing, footwear and accessories, with ordering on WhatsApp and payment by UPI or cash.",
     "heroTitle": "Style for a new chapter",
     "heroLead": "A space for fashion, stories and a new chapter in life, created by a woman who chose to build her life again.",
     "ctaShop": "Shop the collection",
@@ -69,9 +69,9 @@
   },
   "shop": {
     "title": "Store",
-    "metaTitle": "Store · SK Official",
-    "description": "Browse SK Official eyewear, watches, work pants, shoes, anklets and cushion covers. Order on WhatsApp, pay by UPI or cash.",
-    "lead": "Fashion pieces ready to ship from SK Official. Ordering is easy on WhatsApp.",
+    "metaTitle": "Store · House of Ketty",
+    "description": "Browse House of Ketty eyewear, watches, work pants, shoes, anklets and cushion covers. Order on WhatsApp, pay by UPI or cash.",
+    "lead": "Fashion pieces ready to ship from House of Ketty. Ordering is easy on WhatsApp.",
     "filterLabel": "Filter by category",
     "all": "All",
     "sortLabel": "Sort by",
@@ -87,7 +87,7 @@
     "view": "View {name}"
   },
   "product": {
-    "metaTitle": "{name} · SK Official",
+    "metaTitle": "{name} · House of Ketty",
     "gallery": "Photos of {name}",
     "photo": "Photo {n} of {m}",
     "showPhoto": "Show photo {n}",
@@ -134,9 +134,9 @@
     "cleared": "Your bag is now empty."
   },
   "msg": {
-    "order": "Hello SK Official! I would like to order:",
-    "interest": "Hello SK Official! I am interested in {name}.",
-    "hello": "Hello SK Official!",
+    "order": "Hello House of Ketty! I would like to order:",
+    "interest": "Hello House of Ketty! I am interested in {name}.",
+    "hello": "Hello House of Ketty!",
     "design": "design {n}",
     "toConfirm": "price to confirm",
     "total": "Total",
@@ -158,8 +158,8 @@
   },
   "story": {
     "title": "Our story",
-    "metaTitle": "Our story · SK Official",
-    "description": "My story, my life, my new beginning: the story behind SK Official, told in eight episodes.",
+    "metaTitle": "Our story · House of Ketty",
+    "description": "My story, my life, my new beginning: the story behind House of Ketty, told in eight episodes.",
     "kicker": "My story · My life · My new beginning",
     "lead": [
       "The story of a woman who left her old life behind and travelled to a country she never imagined she would call home.",
@@ -176,13 +176,13 @@
     "translated": "Translated from the original {lang}.",
     "readOriginal": "Read the original",
     "end": "That is the story so far. Thank you for reading.",
-    "portraitAlt": "Portrait of the founder of SK Official in sunglasses and a white cap",
-    "mountainAlt": "The founder of SK Official standing on a rock above a green valley with her arms open"
+    "portraitAlt": "Portrait of the founder of House of Ketty in sunglasses and a white cap",
+    "mountainAlt": "The founder of House of Ketty standing on a rock above a green valley with her arms open"
   },
   "contact": {
     "title": "Contact us",
-    "metaTitle": "Contact · SK Official",
-    "description": "Message SK Official on WhatsApp about products, sizes and orders. Pay by UPI or cash.",
+    "metaTitle": "Contact · House of Ketty",
+    "description": "Message House of Ketty on WhatsApp about products, sizes and orders. Pay by UPI or cash.",
     "lead": "Questions about a product, a size or an order? Message us on WhatsApp and we will reply as soon as we can.",
     "line1": "WhatsApp line 1",
     "line2": "WhatsApp line 2",
@@ -214,7 +214,7 @@
     "shopBy": "Shop by category",
     "reach": "Reach us",
     "payments": "We accept",
-    "rights": "© {year} SK Official. All rights reserved.",
+    "rights": "© {year} House of Ketty. All rights reserved.",
     "top": "Back to top"
   },
   "notFound": {

@@ -108,10 +108,25 @@ export async function build() {
     }
   }
 
-  // Old flat URLs (ep01.html …) keep working: 301 on Apache, stub elsewhere.
-  const redirects = episodes.map((ep) => [`${ep.id}.html`, `${base}story/${ep.id}/`]);
+  // Old URLs keep working: 301 on Apache, stub elsewhere. That covers the flat
+  // episode pages (ep01.html …), product ids from before the SK prefix was
+  // dropped (shop/sk-charcoal/), and paths from the github.io preview
+  // (sk-official/…).
+  const redirects = [
+    ...episodes.map((ep) => [`${ep.id}.html`, `${base}story/${ep.id}/`]),
+    ...site.languages.flatMap((l) => products.map((p) => {
+      const pre = l.prefix ? `${l.prefix}/` : '';
+      return [`${pre}shop/sk-${p.id}/`, `${base}${pre}shop/${p.id}/`];
+    })),
+    ...outputs.filter((o) => !o.page.noindex).map((o) => {
+      const to = o.rel.replace(/index\.html$/, '');
+      return [`sk-official/${to}`, `${base}${to}`];
+    }),
+  ];
   for (const [from, to] of redirects) {
-    await fs.writeFile(path.join(OUT, from), `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${dict.en.redirect}</title><meta name="robots" content="noindex"><link rel="canonical" href="${site.url}${to.slice(base.length - 1)}"><meta http-equiv="refresh" content="0; url=${to}"></head><body><p><a href="${to}">${dict.en.redirect}</a></p></body></html>\n`);
+    const file = path.join(OUT, from.endsWith('/') ? `${from}index.html` : from);
+    await fs.mkdir(path.dirname(file), { recursive: true });
+    await fs.writeFile(file,`<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${dict.en.redirect}</title><meta name="robots" content="noindex"><link rel="canonical" href="${site.url}${to.slice(base.length - 1)}"><meta http-equiv="refresh" content="0; url=${to}"></head><body><p><a href="${to}">${dict.en.redirect}</a></p></body></html>\n`);
   }
 
   const sitemapPages = outputs.filter((o) => !o.page.noindex && o.lang === 'en');

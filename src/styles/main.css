@@ -802,6 +802,17 @@ body:has(main > .hero:first-child, main > .story-hero:first-child) main > :first
 .card-title a:focus-visible::after { outline: 3px solid var(--focus); outline-offset: 4px; }
 .product-card:hover .card-title a { text-decoration: underline; text-decoration-thickness: 1px; }
 .card-price { margin: 0; font-weight: 600; color: var(--accent); }
+.mrp { color: var(--muted); font-weight: 400; font-size: 0.85em; }
+.off {
+  display: inline-block;
+  padding: 0.05em 0.45em;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: 600;
+  vertical-align: 0.1em;
+}
 
 /* shop toolbar */
 .toolbar {

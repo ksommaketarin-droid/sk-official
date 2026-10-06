@@ -731,6 +731,7 @@
     },
     {
       "id": "insulated-tumbler",
+      "name": "Insulated Tumbler",
       "category": "drinkware",
       "featured": true,
       "price": {
@@ -757,6 +758,7 @@
     },
     {
       "id": "hair-clips",
+      "name": "Leaf Hair Clips",
       "category": "hair-accessories",
       "featured": true,
       "price": {
@@ -790,16 +792,12 @@
       "price": {
         "tiers": [
           {
-            "amount": 599
-          },
-          {
-            "amount": 799
-          },
-          {
-            "amount": 999
-          },
-          {
-            "amount": 1099
+            "amounts": [
+              599,
+              799,
+              999,
+              1099
+            ]
           }
         ]
       },
@@ -815,78 +813,6 @@
             "en": "Peach and white handmade flower bouquet with pearl details",
             "th": "ช่อดอกไม้แฮนด์เมดสีพีชและขาวประดับมุก",
             "hi": "मोती की सजावट वाला पीच और सफेद हाथ से बना फूलों का बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0045.jpg",
-          "alt": {
-            "en": "Colorful handmade rose flower bouquet",
-            "th": "ช่อดอกไม้กุหลาบแฮนด์เมดสีสันสดใส",
-            "hi": "रंग-बिरंगा हाथ से बना गुलाब का बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0042.jpg",
-          "alt": {
-            "en": "White handmade rose bouquet with pink wrapping and pearl details",
-            "th": "ช่อกุหลาบแฮนด์เมดสีขาวห่อกระดาษชมพูประดับมุก",
-            "hi": "गुलाबी रैपिंग और मोती की सजावट वाला सफेद हाथ से बना गुलाब बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0043.jpg",
-          "alt": {
-            "en": "Colorful handmade flower bouquet with decorative ribbon",
-            "th": "ช่อดอกไม้แฮนด์เมดหลากสีพร้อมริบบิ้นตกแต่ง",
-            "hi": "सजावटी रिबन वाला रंग-बिरंगा हाथ से बना बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0041.jpg",
-          "alt": {
-            "en": "Pink and red handmade rose bouquet",
-            "th": "ช่อดอกกุหลาบแฮนด์เมดสีชมพูและแดง",
-            "hi": "गुलाबी और लाल हाथ से बने गुलाब का बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0038.jpg",
-          "alt": {
-            "en": "Colorful handmade flower bouquet with red and yellow flowers",
-            "th": "ช่อดอกไม้แฮนด์เมดหลากสี ดอกไม้สีแดงและเหลือง",
-            "hi": "लाल और पीले फूलों वाला रंग-बिरंगा हाथ से बना बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0039.jpg",
-          "alt": {
-            "en": "Teddy bear and handmade flower gift bouquet",
-            "th": "ช่อของขวัญตุ๊กตาหมีพร้อมดอกไม้แฮนด์เมด",
-            "hi": "टेडी बियर और हाथ से बने फूलों वाला गिफ्ट बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0040.jpg",
-          "alt": {
-            "en": "Hello Kitty themed handmade flower gift bouquet",
-            "th": "ช่อของขวัญดอกไม้แฮนด์เมดธีม Hello Kitty",
-            "hi": "हैलो किटी थीम वाला हाथ से बना फूलों का गिफ्ट बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0036.jpg",
-          "alt": {
-            "en": "Teddy bear handmade flower gift bouquet",
-            "th": "ช่อของขวัญตุ๊กตาหมีพร้อมดอกไม้แฮนด์เมด",
-            "hi": "टेडी बियर और हाथ से बने फूलों वाला गिफ्ट बुके"
-          }
-        },
-        {
-          "src": "products/IMG-20260930-WA0035.jpg",
-          "alt": {
-            "en": "Hello Kitty handmade flower gift arrangement",
-            "th": "ช่อดอกไม้ของขวัญแฮนด์เมดธีม Hello Kitty",
-            "hi": "हैलो किटी थीम वाला हाथ से बना गिफ्ट अरेंजमेंट"
           }
         }
       ]

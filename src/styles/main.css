@@ -1400,6 +1400,7 @@ select { padding-right: 2.2rem; }
   align-items: center;
   gap: 0.5rem;
   min-height: 40px;
+  min-width: 24px;
   color: var(--text);
   text-decoration: none;
 }

@@ -360,9 +360,11 @@ export async function product(ctx, p) {
   ${related.length ? html`
   <section class="section section-tint" aria-labelledby="related-title">
     <div class="wrap">
-      <h2 id="related-title">${t.product.related}</h2>
-      <ul class="product-grid" role="list">${relatedCards}</ul>
-      <p><a class="text-link" href="${ctx.href('shop/')}">${icon('arrowLeft', 'icon icon-sm')} ${t.product.back}</a></p>
+      <div class="section-head">
+        <h2 id="related-title">${t.product.related}</h2>
+        <a class="text-link" href="${ctx.href('shop/')}">${icon('arrowLeft', 'icon icon-sm')} ${t.product.back}</a>
+      </div>
+      <ul class="product-grid product-row" role="list">${relatedCards}</ul>
     </div>
   </section>` : ''}`;
 

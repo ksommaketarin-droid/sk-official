@@ -80,15 +80,15 @@ function footer(ctx, page) {
       <p>${t.footer.about}</p>
       <p class="footer-tagline">${t.tagline}</p>
     </div>
-    <nav aria-labelledby="f-explore">
+    <nav class="footer-explore" aria-labelledby="f-explore">
       <h2 class="footer-heading" id="f-explore">${t.footer.explore}</h2>
       <ul role="list">${NAV.map(([key, path]) => html`<li><a href="${ctx.href(path)}">${t.nav[key]}</a></li>`)}</ul>
     </nav>
-    <nav aria-labelledby="f-shop">
+    <nav class="footer-cats" aria-labelledby="f-shop">
       <h2 class="footer-heading" id="f-shop">${t.footer.shopBy}</h2>
       <ul role="list">${data.categories.map((c) => html`<li><a href="${ctx.href('shop/')}?c=${c.id}">${c.name[ctx.lang]}</a></li>`)}</ul>
     </nav>
-    <div>
+    <div class="footer-reach">
       <h2 class="footer-heading">${t.footer.reach}</h2>
       <ul role="list" class="footer-contact">${site.whatsapp.map((w, i) => html`
         <li><a href="${waLink(w.number)}" rel="noopener noreferrer">${icon('chat', 'icon icon-sm')}<span>${formatPhone(w.number)}</span></a>

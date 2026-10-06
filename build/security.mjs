@@ -64,7 +64,7 @@ ErrorDocument 404 ${base}404.html
   RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
   # Old URLs from the first version of the site.
-${redirects.map(([from, to]) => `  RewriteRule ^${from.replace(/\./g, '\\.')}$ ${to} [L,R=301]`).join('\n')}
+${redirects.map(([from, to]) => `  RewriteRule ^${from.replace(/\./g, '\\.').replace(/\/$/, '/?')}$ ${to} [L,R=301]`).join('\n')}
 
   # Only GET and HEAD: this is a static site.
   RewriteCond %{REQUEST_METHOD} !^(GET|HEAD)$

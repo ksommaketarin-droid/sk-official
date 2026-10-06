@@ -2,12 +2,18 @@ import { html, raw } from './html.mjs';
 import { icon } from './icons.mjs';
 import { whatsappButtons, paymentFieldset } from './layout.mjs';
 import {
-  fill, inr, waLink, cardPrice, priceTiers, lowestAmount, priceAmounts, exactAmount, upiLink, isUpiId, formatPhone,
+  fill, inr, waLink, cardPrice, discount, priceTiers, lowestAmount, priceAmounts, exactAmount, upiLink, isUpiId, formatPhone,
 } from '../src/scripts/shared.js';
 
 const CARD_SIZES = '(min-width: 1200px) 270px, (min-width: 900px) 30vw, (min-width: 560px) 45vw, 92vw';
 
 const categoryName = (ctx, id) => ctx.data.categories.find((c) => c.id === id).name[ctx.lang];
+
+// Struck-through MRP and the saving, for products sold below MRP.
+function mrpNote(t, p) {
+  const d = discount(p.price, p.mrp);
+  return d ? html` <s class="mrp"><span class="sr-only">${t.shop.mrp} </span>${inr(d.mrp)}</s> <span class="off">${fill(t.shop.off, { n: d.pct })}</span>` : '';
+}
 
 async function productCard(ctx, p, { heading = 'h3' } = {}) {
   const { t, lang } = ctx;
@@ -21,7 +27,7 @@ async function productCard(ctx, p, { heading = 'h3' } = {}) {
     <div class="card-body">
       <p class="card-cat">${categoryName(ctx, p.category)}</p>
       ${raw(`<${heading} class="card-title">`)}<a href="${ctx.href(`shop/${p.id}/`)}">${p.name}</a>${raw(`</${heading}>`)}
-      <p class="card-price">${cardPrice(p.price, t.shop, p.mrp)}</p>
+      <p class="card-price">${cardPrice(p.price, t.shop)}${mrpNote(t, p)}</p>
     </div>
   </li>`;
 }
@@ -93,7 +99,7 @@ const crumbLd = (ctx, items) => ({
 
 export async function home(ctx) {
   const { t, lang, data } = ctx;
-const featured = data.products;
+  const featured = data.products;
   const art = await Promise.all([
     ctx.img.picture('products/charcoal.jpg', { alt: '', sizes: '(min-width: 900px) 24vw, 46vw', priority: true }),
     ctx.img.picture('products/watches-4.jpg', { alt: '', sizes: '(min-width: 900px) 16vw, 32vw', loading: 'eager' }),
@@ -297,7 +303,7 @@ export async function product(ctx, p) {
         <p class="eyebrow"><a href="${ctx.href('shop/')}?c=${p.category}">${categoryName(ctx, p.category)}</a></p>
         <h1 id="product-title">${p.name}</h1>
         <dl class="price-list">${tiers.map((tier) => html`
-          <div class="price-row">${tier.label ? html`<dt>${tier.label}</dt>` : html`<dt class="sr-only">${t.product.total}</dt>`}<dd>${tier.value}</dd></div>`)}
+          <div class="price-row">${tier.label ? html`<dt>${tier.label}</dt>` : html`<dt class="sr-only">${t.product.total}</dt>`}<dd>${tier.value}${exact !== null ? mrpNote(t, p) : ''}</dd></div>`)}
         </dl>
         <p class="product-summary">${p.summary[lang]}</p>
 

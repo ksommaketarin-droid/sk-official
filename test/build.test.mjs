@@ -15,7 +15,7 @@ before(async () => {
   pages = fs.readdirSync(out, { recursive: true })
     .filter((f) => f.endsWith('.html'))
     .map((f) => ({ file: f, html: fs.readFileSync(path.join(out, f), 'utf8') }))
-    .filter((p) => !/^ep0\d\.html$/.test(p.file));
+    .filter((p) => !p.html.includes('http-equiv="refresh"'));
 });
 
 const all = (html, re) => [...html.matchAll(re)];
@@ -102,6 +102,11 @@ test('server config sends the security headers and redirects old URLs', () => {
   assert.match(h, /Options -Indexes/);
   assert.match(h, /RewriteRule \^ep01\\\.html\$ \/story\/ep01\/ \[L,R=301\]/);
   assert.ok(fs.existsSync(path.join(out, 'ep08.html')), 'fallback redirect stub for ep08.html');
+  assert.match(h, /RewriteRule \^shop\/sk-charcoal\/\?\$ \/shop\/charcoal\/ \[L,R=301\]/);
+  for (const [stub, to] of [['shop/sk-charcoal', '/shop/charcoal/'], ['th/shop/sk-flowers', '/th/shop/flowers/'], ['sk-official', '/'], ['sk-official/hi/story/ep03', '/hi/story/ep03/']]) {
+    const html = fs.readFileSync(path.join(out, stub, 'index.html'), 'utf8');
+    assert.match(html, new RegExp(`url=${to}"`), `${stub} should redirect to ${to}`);
+  }
   assert.ok(fs.existsSync(path.join(out, '.well-known/security.txt')));
 });
 

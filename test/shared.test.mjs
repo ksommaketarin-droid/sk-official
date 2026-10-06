@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  fill, inr, cardPrice, priceTiers, priceAmounts, exactAmount, clean, clampQty, waLink, orderMessage, upiLink, isUpiId, formatPhone,
+  fill, inr, cardPrice, discount, priceTiers, priceAmounts, exactAmount, clean, clampQty, waLink, orderMessage, upiLink, isUpiId, formatPhone,
 } from '../src/scripts/shared.js';
 
 const shopT = { from: 'From {p}', priceOnRequest: 'Price on request' };
@@ -23,6 +23,13 @@ test('card prices cover every price shape', () => {
   assert.equal(cardPrice({ tiers: [{ min: 499, max: 699 }] }, shopT), 'From ₹499');
   assert.equal(cardPrice({ tiers: [{ amounts: [299, 399] }] }, shopT), 'From ₹299');
   assert.equal(cardPrice(null, shopT), 'Price on request');
+});
+
+test('discount needs an exact price below the MRP', () => {
+  assert.deepEqual(discount({ amount: 449 }, { amount: 649 }), { mrp: 649, pct: 31 });
+  assert.equal(discount({ amount: 449 }, undefined), null);
+  assert.equal(discount({ amount: 449 }, { amount: 449 }), null);
+  assert.equal(discount({ tiers: [{ amounts: [199, 299] }] }, { amount: 499 }), null);
 });
 
 test('price tiers keep labels per language', () => {

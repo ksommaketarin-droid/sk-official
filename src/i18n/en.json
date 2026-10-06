@@ -82,6 +82,8 @@
     "countOne": "1 product",
     "none": "No products in this category yet.",
     "priceOnRequest": "Price on request",
+    "mrp": "MRP",
+    "off": "{n}% off",
     "from": "From {p}",
     "designs": "{n} designs",
     "view": "View {name}"

@@ -99,7 +99,8 @@ const crumbLd = (ctx, items) => ({
 
 export async function home(ctx) {
   const { t, lang, data } = ctx;
-  const featured = data.products;
+  // Featured first; the homepage shows six and a button reveals the rest.
+  const featured = [...data.products].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
   const art = await Promise.all([
     ctx.img.picture('products/charcoal.jpg', { alt: '', sizes: '(min-width: 900px) 24vw, 46vw', priority: true }),
     ctx.img.picture('products/watches-4.jpg', { alt: '', sizes: '(min-width: 900px) 16vw, 32vw', loading: 'eager' }),
@@ -145,7 +146,10 @@ export async function home(ctx) {
         </div>
         <a class="btn btn-secondary" href="${ctx.href('shop/')}">${t.home.viewAll}${icon('arrowRight')}</a>
       </div>
-      <ul class="product-grid" role="list">${cards}</ul>
+      <ul class="product-grid" role="list" id="home-products" data-more="6">${cards}</ul>
+      ${featured.length > 6 ? html`<div class="more-row">
+        <button class="btn btn-secondary" type="button" data-show-more aria-controls="home-products" hidden>${t.home.showMore}</button>
+      </div>` : ''}
     </div>
   </section>
 

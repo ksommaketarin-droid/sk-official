@@ -759,6 +759,9 @@ body:has(main > .hero:first-child, main > .story-hero:first-child) main > :first
 
 .product-card { position: relative; display: flex; flex-direction: column; }
 .product-card[hidden] { display: none; }
+.js [data-more]:not([data-ready]) > .product-card:nth-child(n+7) { display: none; }
+[data-show-more][hidden] { display: none; }
+.more-row { display: flex; justify-content: center; margin-top: clamp(2rem, 4vw, 3rem); }
 
 .card-media {
   position: relative;

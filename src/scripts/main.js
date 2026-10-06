@@ -526,6 +526,32 @@ function initButterfly() {
   }, { passive: true });
 }
 
+// ---------------------------------------------------------------- show more
+
+// The homepage grid shows a few products; each click reveals the next batch.
+// Without JavaScript every product stays visible.
+function initShowMore() {
+  const button = $('[data-show-more]');
+  const grid = $('[data-more]');
+  if (!button || !grid) return;
+  const step = Number(grid.dataset.more);
+  const cards = $$('.product-card', grid);
+  let shown = step;
+  const apply = () => {
+    cards.forEach((c, i) => { c.hidden = i >= shown; });
+    button.hidden = shown >= cards.length;
+  };
+  button.addEventListener('click', () => {
+    const next = cards[shown];
+    shown += step;
+    apply();
+    // Keep keyboard users in place: focus the first newly shown product.
+    $('.card-title a', next)?.focus();
+  });
+  apply();
+  grid.dataset.ready = '';
+}
+
 // ---------------------------------------------------------------- boot
 
 if (app) {
@@ -533,6 +559,7 @@ if (app) {
   initLangMenu();
   initBag();
   initShop();
+  initShowMore();
   initOrder(initGallery());
   initCopy();
   initButterfly();

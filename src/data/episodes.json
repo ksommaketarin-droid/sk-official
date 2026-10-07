@@ -46,5 +46,17 @@
     "teaser": {
       "en": "When she realised that going back to work was the first step toward standing on her own again.",
       "th": "เมื่อรู้ว่าการกลับไปทำงานคือก้าวแรกของการกลับมายืนด้วยตัวเองอีกครั้ง",
-      "hi": "जब उसे एहसास हुआ कि काम पर लौटना फिर से अपने पैरों पर खड़े होने की पहली सीढ़ी थी।" } }
+      "hi": "जब उसे एहसास हुआ कि काम पर लौटना फिर से अपने पैरों पर खड़े होने की पहली सीढ़ी थी।" } },
+  { "id": "ep09", "original": "en",
+    "title": {
+      "en": "The Night I Realized I Had to Keep Going",
+      "th": "คืนที่ฉันรู้ว่าตัวเองต้องเดินต่อ",
+      "hi": "वह रात जब मुझे एहसास हुआ कि मुझे आगे बढ़ते रहना है"
+    },
+    "teaser": {
+      "en": "A difficult night that changed how she saw strength, responsibility, and the decision to keep building her life.",
+      "th": "คืนที่หนักคืนหนึ่ง ซึ่งทำให้เข้าใจความเข้มแข็ง ความรับผิดชอบ และการเลือกเดินหน้าสร้างชีวิตต่อไป",
+      "hi": "एक कठिन रात जिसने उसे ताकत, ज़िम्मेदारी और अपनी ज़िंदगी को आगे बनाते रहने का अर्थ समझाया।"
+    }
+  }
 ]

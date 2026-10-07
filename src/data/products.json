@@ -627,6 +627,7 @@
     },
     {
       "id": "face-masks",
+      
       "name": "Swiss Beauty Collagen Boost Mask",
       "category": "cosmetics",
       "featured": true,
@@ -642,10 +643,10 @@
         "hi": "Swiss Beauty Collagen Boost Mask सरल स्किनकेयर के लिए।"
       },"images": [
   {
-    "src": "products/ชื่อไฟล์รูป.jpg",
+     "src": "products/IMG-20260930-WA0013.jpg",
     "alt": {
       "en": "Swiss Beauty Collagen Boost Mask",
-      "th": "Swiss Beauty Collagen Boost Mask มาสก์หน้า",
+      "th": "Swiss Beauty Collagen Boost Mask มาสก์หน้าสำหรับการดูแลผิว",
       "hi": "Swiss Beauty Collagen Boost Mask फेस मास्क"
     }
   }

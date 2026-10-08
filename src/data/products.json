@@ -781,6 +781,57 @@
             "hi": "पत्ते के डिज़ाइन वाली 5 हेयर क्लิป्स"
           }
         }
+                  
+
+            ]
+    },
+    {
+      "id": "wet-wipes",
+      "name": "Wet Wipes",
+      "category": "home",
+      "featured": true,
+      "price": {
+        "tiers": [
+          {
+            "label": {
+              "en": "1 pack",
+              "th": "1 ห่อ",
+              "hi": "1 पैक"
+            },
+            "amount": 75
+          },
+          {
+            "label": {
+              "en": "3 packs",
+              "th": "3 ห่อ",
+              "hi": "3 पैक"
+            },
+            "amount": 209
+          }
+        ]
+      },
+      "summary": {
+        "en": "Wet wipes for convenient everyday use.",
+        "th": "ทิชชูเปียกสำหรับใช้ในชีวิตประจำวัน",
+        "hi": "रोज़मर्रा के उपयोग के लिए वेट वाइप्स।"
+      },
+      "images": [
+        {
+          "src": "products/file_0000000073d4820aa270203d92b12d96.png",
+          "alt": {
+            "en": "Wet wipes",
+            "th": "ทิชชูเปียก",
+            "hi": "वेट वाइप्स"
+          }
+        },
+        {
+          "src": "products/file_00000000f680820a968c78ddc5fa2639.png",
+          "alt": {
+            "en": "Wet wipes",
+            "th": "ทิชชูเปียก",
+            "hi": "वेट วाइप्स"
+          }
+        }
       ]
     },
     {
